@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profil utilisateur</title>
-    <link rel="stylesheet" href="build/styles/profile-user.css" />
+    <link rel="stylesheet" href="../build/styles/profile-user.css" />
   </head>
   <body>
     <header class="sticky top-0 z-50 bg-white drop-shadow-md">
@@ -12,7 +12,7 @@
         <ul>
           <li>
             <a href="index.html">
-              <!-- <img src="images/logo-colok.svg" alt="logo du site pour aller à l'accueil" class="w-32 m-auto h-20"> -->
+              <!-- <img src="../assest/images/logo-colok.svg" alt="logo du site pour aller à l'accueil" class="w-32 m-auto h-20"> -->
             </a>
           </li>
         </ul>
@@ -26,7 +26,7 @@
     <main class="">
       <h1 class="page-title">Mon profil</h1>
       <div class="profile-picture">
-        <img src="images/profile_img.png" alt="" />
+        <img src="../assets/images/profile_img.png" alt="" />
       </div>
       <div class="profile">
         <p>Information personnelle</p>
@@ -118,7 +118,7 @@
       </div>
     </main>
     <!-- <div class="house">
-      <img src="images/house_footer.svg" alt="">
+      <img src="../assets/images/house_footer.svg" alt="">
   </div> -->
     <footer></footer>
   </body>

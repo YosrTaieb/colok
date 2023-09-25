@@ -48,7 +48,7 @@
 
             @layer components {
                 .fenetre{
-                    @apply h-[81.5vh] text-center pt-2 ;
+                    @apply h-[85.5vh] text-center pt-2 ;
                 }
                 .container-titre{
                     @apply  relative flex flex-col items-center justify-around mb-12;
@@ -90,6 +90,8 @@
                 <div class="trait w-52"></div>
             </div> 
 
+
+            
 
             <div class="absolute inset-x-0 bottom-0"><img src="../assets/images/maisons.svg" alt="image de maisons"></div>
         </div>

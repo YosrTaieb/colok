@@ -5,19 +5,22 @@ session_start();
 require_once('../model/connexion.php');
 
 
-if(isset($_POST['login'])){
 
+if(isset($_POST['email'])){
+    var_dump($_POST['email']);
     $conn = connexion();
 
     $email = $_POST['email'];
 
     $password = $_POST['mdp'];
 
+
+
     $stmt = $conn->query("SELECT * FROM utilisateur  WHERE email ='$email'");
 
     $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    
+    var_dump($data);
 
     if ($data[0] && password_verify($password, $data[0]['mdp'])) {
 

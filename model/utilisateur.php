@@ -1,8 +1,8 @@
 <?php 
-    require('connexion.php');
+    require('../model/connexion.php');
 
 
-    function addUtilisateur($nom,$prenom,$date_naissance,$email,$mdp,$allergies,$photo){
+    function addUtilisateur($nom,$prenom,$date_naissance,$email,$mdp){
         $conn = connexion();
         $data = [
             'nom' => $nom,
@@ -10,14 +10,13 @@
             'date_naissance' => $date_naissance,
             'email' => $email,
             'mdp' => password_hash($mdp,PASSWORD_DEFAULT),
-            'role' => 'colocataire',
-            'allergies' => $allergies,
-            'photo' => $photo,
+            'role' => 'colocataire'
+    
 
         ];
 
-        $sql = "INSERT INTO utilisateur (nom,prenom,date_naissance,email,mdp,role,allergies,photo_profil) 
-            values(:nom,:prenom,:date_naissance,:email,:mdp,:role,:allergies,:photo) "; 
+        $sql = "INSERT INTO utilisateur (nom,prenom,date_naissance,email,mdp,role) 
+            values(:nom,:prenom,:date_naissance,:email,:mdp,:role) "; 
 
        
     

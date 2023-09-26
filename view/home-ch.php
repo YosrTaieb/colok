@@ -80,8 +80,8 @@
             <img class=" mb-6 ml-auto mr-auto w-80 md:w-96" src="../assets/images/logo-colok.svg" alt="logo"> 
             <p class="mx-auto w-[11.2rem] md:w-full mt-6 mb-12"> Des tâches partagées, une colocation équilibrée </p>
             <div class="flex flex-col h-24 items-center justify-between mt-28	md:flex-row md:justify-center">
-                <button class="w-36 h-8 bg-white rounded-full text-[#8ECAE6] font-medium md:mr-3">Créer un compte</button>
-                <button  class="w-36 h-8 bg-[#8ECAE6] rounded-full text-white font-medium md:ml-3">Se connecter</button>
+                <button class="w-36 h-8 bg-white rounded-full text-[#8ECAE6] font-medium md:mr-3"><a href="signIn.php">Créer un compte</a></button>
+                <button  class="w-36 h-8 bg-[#8ECAE6] rounded-full text-white font-medium md:ml-3"><a href="signIn.php">Se connecter</a></button>
             </div> 
             <div class="absolute inset-x-0 bottom-0"><img src="../assets/images/maisons.svg" alt="image de maisons"></div>           
         </div> 

@@ -3,5 +3,5 @@
 
     session_destroy();
 
-    header("location:../view/accueil.php");
+    header("location:../view/home-ch.php");
 ?>

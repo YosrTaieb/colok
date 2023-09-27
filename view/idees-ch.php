@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colok</title>
     <script src="taches.js" defer></script>
-
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.5/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../build/styles/profile-user.css" />
+
 
     <script>
         tailwind.config = {
@@ -89,6 +90,14 @@
                 <h2>Boîte  à  idées</h2>
                 <div class="trait w-52"></div>
             </div> 
+
+            <form class="" action="">
+                <label for="">Titre de l'idée</label>
+                <input type="text" class="form-input"/>
+
+                <label for="">Description de l'idée</label>
+                <textarea placeholder="Bio" class="textarea textarea-bordered textarea-md w-full max-w-xs" ></textarea>
+            </form>
 
 
             

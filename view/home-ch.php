@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colok</title>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.5/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.5/dist/full.css" rel="stylesheet" type="text/css"/>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../javascript/carrousel.js" defer></script>
     <link rel="stylesheet" href="../build/styles/home-ch.css">
+    <link rel="stylesheet" href="../build/styles/carrousel.css">
 
     <script>
         tailwind.config = {
@@ -166,20 +168,97 @@
 
 <!--#region AVIS  -->
 
-        <div class="fenetre border-4 border-indigo-600">
+        <div class="fenetre border-4 border-indigo-600 h-[100vh] md:h-[60vh]">
     
           <div class="container-titre relative flex flex-col items-center justify-around">
             <h2>Avis</h2>
             <div class="trait w-20"></div>
-          </div>                              
+          </div>    
+          
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+<div class="taille-carrousel"> 
+<div id="ProductPromotions" class="promotions">
+</div>
+<div id="ServicesPromotions" class="promotions">
+  <ul class="PromotionsList">
+    <li class="active" data-slide-value="1">
+      <span class="app-icon">
+        <img src="../assets/images/ph-avis2.jpg" alt="photo d'une personne"/>
+      </span>
+      <span class="app-short-desc">
+        <span class="app-title">
+          <span class="title"> Sophie, 22 ans :</span>
+        </span>
+        <span class="app-desc">
+        "Colok simplifie vraiment la vie en colocation. Les tâches préassignées sont un énorme avantage. On sait toujours qui est en charge de quoi, ce qui évite les malentendus. C'est un outil génial pour rendre la vie en communauté plus agréable."
+        </span>
+        <!-- <span class="learn-button">
+          <button class="learn-more-button">Learn More</button>
+        </span> -->
+      </span>
+    </li>
+    <li data-slide-value="2">
+      <span class="app-icon">
+        <img src="../assets/images/ph-avis3.jpg" alt=""/>
+      </span>
+      <span class="app-short-desc">
+        <span class="app-title">
+          <span class="title"> Maxime, 26 ans : </span>
+        </span>
+        <span class="app-desc">
+        "Colok est l'outil idéal pour vivre en colocation sans soucis. Les tâches ménagères sont réparties équitablement, et tout est bien 
+        organisé grâce au calendrier des événements. J'aime cette plateforme, elle nous permet de vivre en harmonie."
+        </span>
+        <!-- <span class="learn-button">
+          <button class="learn-more-button">Learn More</button>
+        </span> -->
+      </span>
+    </li>
+    <li data-slide-value="3">
+      <span class="app-icon">
+        <img src="../assets/images/ph-avis1.png" alt=""/>
+      </span>
+      <span class="app-short-desc">
+        <span class="app-title">
+          <span class="title"> Kevin, 30 ans : </span>
+        </span>
+        <span class="app-desc">
+        "Enfin, une solution qui prend en charge la gestion des tâches en colocation ! Colok attribue automatiquement les tâches, ce qui rend tout tellement plus équitable. J'apprécie le temps que cela nous fait gagner. Le calendrier des événements est également pratique pour planifier nos soirées.
+        </span>
+        <!-- <span class="learn-button">
+          <button class="learn-more-button">Learn More</button>
+        </span> -->
+      </span>
+    </li>
+    
+  </ul>
+
+  
+    <div class="controls">
+      <span class="dot active" data-slide="1"></span>
+      <span class="dot" data-slide="2"></span>
+      <span class="dot" data-slide="3"></span>
+    </div>
+  
+
+</div>
+
+</div>
+<!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+
+
+
+
+
+
             
-            <div>
+            <!-- <div>
                 <div class="carousel pt-[1rem] h-full w-full">
 
                     <div id="slide1" class="carousel-item relative w-full flex flex-col md:flex-row">
                       
                       <div class="w-[25rem] md:w-[50rem] h-48 mx-auto rounded-[1rem] bg-[#E1F6FD] pl-6 py-2 pr-2 flex-col relative">
-                          <!--<img class=" md:-ml-24 rounded-full w-40 h-40 border-8 border-white" src="assets/ph-avis1.png" alt="photo d'une personne"> -->
+                          <img class=" md:-ml-24 rounded-full w-40 h-40 border-8 border-white" src="assets/ph-avis1.png" alt="photo d'une personne"> 
                           <p class="text-center text-justify h-96 w-[60rem] md:w-[40rem] m-auto pl-14 self-center">
                               Maxime, 26 ans :
                               "Colok est l'outil idéal pour vivre en colocation sans soucis. Les tâches ménagères sont réparties équitablement, et tout est bien 
@@ -224,7 +303,7 @@
                     </div> 
                   </div>
 
-            </div>          
+            </div>           -->
         </div>
 <!--#endregion -->
 

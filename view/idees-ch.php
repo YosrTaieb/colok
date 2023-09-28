@@ -6,11 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colok</title>
-    <script src="taches.js" defer></script>
+    <link rel="stylesheet" href="../build/styles/boit-idee.css">
+    <script src="taches.js" defer></script>  
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.5/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../build/styles/profile-user.css" />
-
 
     <script>
         tailwind.config = {
@@ -91,15 +90,21 @@
                 <div class="trait w-52"></div>
             </div> 
 
-            <form class="" action="">
-                <label for="">Titre de l'idée</label>
-                <input type="text" class="form-input"/>
 
-                <label for="">Description de l'idée</label>
-                <textarea placeholder="Bio" class="textarea textarea-bordered textarea-md w-full max-w-xs" ></textarea>
+
+            <form action="" class="w-72 mx-auto md:w-1/3	">
+
+                <div class="flex flex-col w-full">
+                    <label class="label">Titre de l'idée</label> 
+                    <input type="text" placeholder="Nom de mon idée" class="input input-bordered mb-3" />
+                
+                    <label class="label">Description de l'idée</label>
+                    <textarea placeholder="Je vous propose" class="textarea textarea-bordered textarea-lg mb-8" ></textarea>
+                
+                    <button class="button h-8 w-24 rounded-full text-white self-end">Proposer</button>
+                </div>
+
             </form>
-
-
             
 
             <div class="absolute inset-x-0 bottom-0"><img src="../assets/images/maisons.svg" alt="image de maisons"></div>

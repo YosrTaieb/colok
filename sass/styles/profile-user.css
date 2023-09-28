@@ -30,7 +30,6 @@ main {
   border-radius: 50%;
   position: absolute;
 }
-
 .circle-green {
   width: 500px;
   height: 500px;
@@ -39,7 +38,6 @@ main {
   z-index: -1;
   opacity: 0.6;
 }
-
 .circle-purple {
   width: 400px;
   height: 400px;
@@ -49,7 +47,6 @@ main {
   z-index: -1;
   opacity: 0.7;
 }
-
 .circle-blue {
   width: 300px;
   height: 300px;
@@ -69,25 +66,21 @@ main {
   margin: 0 auto;
   margin-bottom: 100px;
 }
-
 .profile p {
   color: #7d7d7d;
   font-family: "Lato", sans-serif;
   text-align: center;
   font-size: 30px;
 }
-
 .profile-picture {
   padding: 30px 0;
 }
-
 .profile-picture img {
   width: 100px;
   height: 100px;
   border: 1px solid #7d7d7d;
   border-radius: 50%;
 }
-
 .profile-form {
   padding: 0 40px 40px;
 }
@@ -99,12 +92,10 @@ main {
   border-radius: 10px;
   background: transparent;
 }
-
 .form-input:focus {
   background-color: #fff;
   border: 1px solid #7d7d7d;
 }
-
 .form-btn {
   width: 100px;
   display: flex;
@@ -129,12 +120,10 @@ main {
   flex-direction: column;
   margin-bottom: 20px;
 }
-
 .input-container label {
   color: #7d7d7d;
   font-family: "Lato", sans-serif;
 }
-
 .input-container span {
   color: red;
 }
@@ -156,6 +145,4 @@ footer {
   color: #fff;
   padding: 2vh 2vw;
   text-align: center;
-} 
-
-/*# sourceMappingURL=profile-user.css.map */
+}/*# sourceMappingURL=profile-user.css.map */

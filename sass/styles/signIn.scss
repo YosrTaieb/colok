@@ -16,6 +16,7 @@ body, input {
   background-color: #fff;
   min-height: 100vh;
   overflow: hidden;
+  
 }
 
 .forms-container {
@@ -24,6 +25,8 @@ body, input {
   height: 100%;
   top: 0;
   left: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .signin-signup {
@@ -48,15 +51,15 @@ form {
   overflow: hidden;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+}
 
-  &.sign-up-form {
-    opacity: 0;
-    z-index: 1;
-  }
+form.sign-up-form {
+  opacity: 0;
+  z-index: 1;
+}
 
-  &.sign-in-form {
-    z-index: 2;
-  }
+form.sign-in-form {
+  z-index: 2;
 }
 
 .title {
@@ -76,29 +79,29 @@ form {
   grid-template-columns: 15% 85%;
   padding: 0 0.4rem;
   position: relative;
+}
 
-  i {
-    text-align: center;
-    line-height: 55px;
-    color: #acacac;
-    transition: 0.5s;
-    font-size: 1.1rem;
-  }
+.input-field i {
+  text-align: center;
+  line-height: 55px;
+  color: #acacac;
 
-  input {
-    background: none;
-    outline: none;
-    border: none;
-    line-height: 1;
-    font-weight: 600;
-    font-size: 1.1rem;
-    color: #333;
+  font-size: 1.1rem;
+}
 
-    &::placeholder {
-      color: #aaa;
-      font-weight: 500;
-    }
-  }
+.input-field input {
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.input-field input::placeholder {
+  color: #aaa;
+  font-weight: 500;
 }
 
 .social-text {
@@ -124,11 +127,11 @@ form {
   text-decoration: none;
   font-size: 1.1rem;
   transition: 0.3s;
+}
 
-  &:hover {
-    color: #282828;
-    border-color: #D1BEDD;
-  }
+.social-icon:hover {
+  color: #D1BEDD;
+  border-color: #413d43;
 }
 
 .btn {
@@ -144,11 +147,10 @@ form {
   margin: 10px 0;
   cursor: pointer;
   transition: 0.5s;
+}
 
-  &:hover {
-    color: #282828;
-    background-color: #D1BEDD;
-  }
+.btn:hover {
+  background-color: #D1BEDD !important;
 }
 
 .panels-container {
@@ -169,7 +171,7 @@ form {
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
-  background-image: linear-gradient(-45deg, #d0afe4 1%, #D1BEDD 100%);
+  background-image: linear-gradient(-45deg,#D1BEDD 0%, #f0caf0 100%);
   transition: 1.8s ease-in-out;
   border-radius: 50%;
   z-index: 6;
@@ -192,7 +194,7 @@ form {
 
 .left-panel {
   pointer-events: all;
-  padding: 5rem 17% 2rem 12%;
+  padding: 3rem 17% 2rem 12%;
 }
 
 .right-panel {
@@ -217,68 +219,58 @@ form {
   padding: 0.7rem 0;
 }
 
-
-
-.btn-connexion{
-  width: 150px;
-  background-color: #d0afe4!important;
-  border: none;
-  outline: none;
-  height: 49px;
-  border-radius: 49px;
-  color: #fff;
-  text-transform: uppercase;
+.btn.transparent {
+  margin: 0;
+  background: none;
+  border: 2px solid #fff;
+  width: 130px;
+  height: 41px;
   font-weight: 600;
-  
-  &:hover {
-    color: #282828;
-    border-color: #a887bd;
-  }
+  font-size: 0.8rem;
 }
 
-.right-panel .image, .right-panel .content {
+.right-panel .image,
+.right-panel .content {
   transform: translateX(800px);
 }
 
 /* ANIMATION */
 
-.container.sign-up-mode {
-  &:before {
-    transform: translate(100%, -50%);
-    right: 52%;
-  }
+.container.sign-up-mode:before {
+  transform: translate(100%, -50%);
+  right: 52%;
+}
 
-  .left-panel {
-    .image, .content {
-      transform: translateX(-800px);
-    }
-  }
+.container.sign-up-mode .left-panel .image,
+.container.sign-up-mode .left-panel .content {
+  transform: translateX(-800px);
+}
 
-  .signin-signup {
-    left: 25%;
-  }
+.container.sign-up-mode .signin-signup {
+  left: 25%;
+}
 
-  form.sign-up-form {
-    opacity: 1;
-    z-index: 2;
-  }
+.container.sign-up-mode form.sign-up-form {
+  opacity: 1;
+  z-index: 2;
+}
 
-  form.sign-in-form {
-    opacity: 0;
-    z-index: 1;
-  }
+.container.sign-up-mode form.sign-in-form {
+  opacity: 0;
+  z-index: 1;
+}
 
-  .right-panel .image, .right-panel .content {
-    transform: translateX(0%);
-  }
+.container.sign-up-mode .right-panel .image,
+.container.sign-up-mode .right-panel .content {
+  transform: translateX(0%);
+}
 
-  .left-panel {
-    pointer-events: none;
-  }
+.container.sign-up-mode .left-panel {
+  pointer-events: none;
+}
 
-  .right-panel {
-    pointer-events: all;
-  }
+.container.sign-up-mode .right-panel {
+  pointer-events: all;
 }
 
 @media (max-width: 870px) {
@@ -295,8 +287,184 @@ form {
     left: 50%;
   }
 
-  .container.sign-up-mode .signin-signup {
+  .signin-signup, .container.sign-up-mode .signin-signup {
     left: 50%;
- 
+  }
+
+  .panels-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+  }
+
+  .panel {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2.5rem 8%;
+    grid-column: 1 / 2;
+  }
+
+  .right-panel {
+    grid-row: 3 / 4;
+  }
+
+  .left-panel {
+    grid-row: 1 / 2;
+  }
+
+  .image {
+    width: 200px;
+    transition: transform 0.9s ease-in-out;
+    transition-delay: 0.6s;
+  }
+
+  .panel .content {
+    padding-right: 15%;
+    transition: transform 0.9s ease-in-out;
+    transition-delay: 0.8s;
+  }
+
+  .panel h3 {
+    font-size: 1.2rem;
+  }
+
+  .panel p {
+    font-size: 0.7rem;
+    padding: 0.5rem 0;
+  }
+
+  .btn.transparent {
+    width: 110px;
+    height: 35px;
+    font-size: 0.7rem;
+  }
+
+  .container:before {
+    width: 1500px;
+    height: 1500px;
+    transform: translateX(-50%);
+    left: 30%;
+    bottom: 68%;
+    right: initial;
+    top: initial;
+    transition: 2s ease-in-out;
+  }
+
+  .container.sign-up-mode:before {
+    transform: translate(-50%, 100%);
+    bottom: 32%;
+    right: initial;
+  }
+
+  .container.sign-up-mode .left-panel .image,
+  .container.sign-up-mode .left-panel .content {
+    transform: translateY(-300px);
+  }
+
+  .container.sign-up-mode .right-panel .image,
+  .container.sign-up-mode .right-panel .content {
+    transform: translateY(0px);
+  }
+
+  .right-panel .image,
+  .right-panel .content {
+    transform: translateY(300px);
+  }
+
+  .container.sign-up-mode .signin-signup {
+    top: 5%;
+    transform: translate(-50%, 0);
   }
 }
+
+@media (max-width: 570px) {
+  form {
+    padding: 0 1.5rem;
+  }
+
+  .image {
+    display: none;
+  }
+  .panel .content {
+    padding: 0.5rem 1rem;
+  }
+  .container {
+    padding: 1.5rem;
+  }
+
+  .container:before {
+    bottom: 72%;
+    left: 50%;
+  }
+
+  .container.sign-up-mode:before {
+    bottom: 28%;
+    left: 50%;
+  }
+}
+
+
+/* Ajoutez cette règle CSS pour définir la hauteur personnalisée */
+
+
+// @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+// .user-circle {
+//   width: 3.5rem; // Définissez la taille du cercle selon vos besoins
+//   height: 3.5rem; // Définissez la taille du cercle selon vos besoins
+//   background: linear-gradient(40deg, #8CB369, #5F8A2B , #fff);  // Couleur du cercle 
+//   border-radius: 50%; // Rend le carré en un cercle
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin-right: 15px; // Marge à droite pour séparer du texte, ajustez-la selon vos besoins
+
+//   // Créez une classe pour l'icône d'utilisateur
+//   .user-icon {
+//     color: #fff;
+//     font-size: 2rem; // Ajustez la taille de l'icône selon vos besoins
+//     animation: pulseOnce 2s 1, borderOnce 1s 1; // Définissez l'animation de pulsation et de bordure
+//   }
+// }
+
+// Définissez l'animation de pulsation avec @keyframes
+@keyframes pulseOnce {
+  0% {
+    transform: scale(1.8);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Styles pour l'effet de soulignement */
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: #333333; /* Couleur du texte */
+  transition: color 0.3s ease, border-bottom-color 0.3s ease; /* Transition de couleur du texte et de la bordure */
+}
+
+.nav-link:hover {
+  color: #8CB369; /* Couleur du texte au survol  */
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px; /* Épaisseur de la ligne de soulignement */
+  bottom: -2px; /* Décalez légèrement la ligne vers le bas pour cacher le texte */
+  left: 0;
+  background-color: transparent; /* Couleur de l'animation du soulignement (transparent au début) */
+  transition: width 0.3s ease, background-color 0.3s ease; /* Durée de l'animation */
+}
+
+.nav-link:hover::before {
+  width: 100%; /* Largeur de l'animation du soulignement au survol */
+  background-color:  #8CB369; /* Couleur de l'animation du soulignement (violet) */
+}
+// styles.scss
+

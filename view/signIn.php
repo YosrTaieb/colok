@@ -73,7 +73,6 @@ session_start();
                             <img src="../assets/images/profil-nav.svg" alt="" class="w-[57px] py-2 mt-2  with-gradient hover-animation">
 
 
-
                         </button>
                         <div x-show="open" x-transition:enter="transition ease-out duration-100"
                             x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100"

@@ -22,8 +22,7 @@
                 class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
                 <div class="p-4 flex flex-row items-center justify-between md:px-4 h-16">
                     <a href="#" class="visible w-1/2 text-lg focus:outline-none focus:shadow-outline md:invisible w-0 md:flex items-center">
-                    
-
+                  
                     </a>
 
                     <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">

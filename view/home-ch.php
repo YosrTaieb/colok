@@ -146,17 +146,10 @@
             </figure>
 
             <img class=" mb-6 ml-auto mr-auto w-80 md:w-96" src="../assets/images/logo-colok.svg" alt="logo"> 
-<<<<<<< HEAD
-            <p class="mx-auto w-[11.2rem] md:w-full mt-6 mb-12"> Des tâches partagées, une colocation équilibrée </p>
-            <div class="flex flex-col h-24 items-center justify-between mt-28	md:flex-row md:justify-center">
-                <button class="w-36 h-8 bg-white rounded-full text-[#8ECAE6] font-medium md:mr-3">Créer un compte</button>
-                <button  class="w-36 h-8 bg-[#8ECAE6] rounded-full text-white font-medium md:ml-3">Se connecter</button>
-=======
             <p class="mx-auto w-[11.2rem] text-black relative md:w-full mt-6 mb-12"> Des tâches partagées, une colocation équilibrée </p>
             <div class="illust-propos flex flex-col h-24 items-center justify-between mt-28	md:flex-row md:justify-center">
                 <button class="bg-white md:mr-3"><a href="signIn.php">Créer un compte</a></button>
                 <button  class="bg-[#257EA7] text-white md:ml-3"><a href="signIn.php">Se connecter</a></button>
->>>>>>> 325138c96dbae48ed255e5c82aec8d6ee01cf2cb
             </div> 
             <div   class=" absolute inset-x-0 bottom-0" ><img src="../assets/images/maisons.svg" alt="image de maisons"></div>           
         </div> 

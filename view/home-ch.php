@@ -121,7 +121,7 @@
 <!--#endregion -->
 
     <main>
-
+<?php  if(isset($_GET['msg'])){ echo $_GET['msg'] ;}  ?>
 <!--#region ACCUEIL  -->
         <div class="container fenetre relative bg-[#96cde3] h-[90vh]">  
 

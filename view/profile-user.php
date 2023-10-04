@@ -1,25 +1,23 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="dark">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Profil utilisateur</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="../js/app.js" defer></script>
     <link rel="stylesheet" href="../build/styles/profile-user.css" />
+
   </head>
   <body>
-    <header class="sticky top-0 z-50 bg-white drop-shadow-md">
-      <nav>
-        <ul>
-          <li>
-            <a href="index.html">
-              <!-- <img src="../assest/images/logo-colok.svg" alt="logo du site pour aller à l'accueil" class="w-32 m-auto h-20"> -->
-            </a>
-          </li>
-        </ul>
-      </nav>
+    <header class="w-full text-gray-700 bg-white sticky z-50 top-0 drop-shadow-md">
+       <?php include("nav.php")?>
+     
     </header>
 <div class="background">
-
 
 
 
@@ -29,12 +27,24 @@
 </div>
     <main class="">
       <h1 class="page-title">Mon profil</h1>
-      <div class="profile-picture">
-        <img src="../assets/images/profile_img.png" alt="" />
-      </div>
+      <div class="profile-picture">  
+    <a href="#imageFile" onclick="poutpout()" class="profile-link">
+        <img src="../assets/images/profile_img.png" id="blah" alt=""> 
+        <i id="mon-icon" class="fas fa-camera"></i>
+
+    </a>
+</div>
+
+  
+      
       <div class="profile">
         <p>Information personnelle</p>
+        
         <form class="profile-form" action="">
+       
+                                   
+                                    <input type="file" id="imageFile" name="fileToUpload" accept="image/*" style="display: none;">
+                               
           <div class="name-container">
             <div class="input-container">
               <label htmlFor="last-name">Nom <span>*</span> </label>

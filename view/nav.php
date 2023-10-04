@@ -1,28 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-  integrity="sha384-Tf2tu7t4f5HyA4vUfo3C9Pj6a0j3IjgQbKT7Ld6g/dsdFdjzk5t01PLj5t5Bk5Kk2"
-  crossorigin="anonymous"/>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="../build/styles/signIn.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="../js/app.js" defer></script>
-<body>
-<header>
-
-        <div class="w-full text-gray-700 bg-white sticky z-50 top-0 drop-shadow-md">
+<header class="w-full text-gray-700 bg-white sticky z-50 top-0 drop-shadow-md">
+        <div class="w-full text-gray-700 ">
             <div x-data="{ open: false }"
                 class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-                <div class="p-4 flex flex-row items-center justify-between md:px-4 h-16">
+                <div class="p-4 flex flex-row items-center justify-between md:px-12 h-16">
                     <a href="#" class="visible w-1/2 text-lg focus:outline-none focus:shadow-outline md:invisible w-0 md:flex items-center">
-                  
+                    <img src="../assets/images/logo-colok.svg" alt="logo du site pour aller à l'accueil" class="w-24">
                     </a>
 
                     <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
@@ -44,8 +27,9 @@
                     <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 nav-link" href="#">
                         <i class="far fa-calendar-alt"></i> Planning 
                     </a>
-                    <a class="h-0 invisible md:visible w-32 flex items-center" href="#"><img src="../assets/images/logo-colok.svg" alt="logo du site pour aller à l'accueil"></a>
-
+                    <a class="h-0 invisible md:visible w-32 flex items-center">
+                    <img src="../assets/images/logo-colok.svg"  alt="logo du site pour aller à l'accueil" class="w-24 m-auto h-24 sm:w-auto sm:m-0 sm:h-auto">
+                    </a>
                     <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 nav-link" href="signIn.php">
                         <i class="fas fa-sign-in-alt"></i> Inscription
                     </a>
@@ -55,9 +39,8 @@
                     </a>
                     <div @click.away="open = false" class="relative" x-data="{ open: false }">
                         <button @click="open = !open"
-                            class="flex flex-row items-center w-18 px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 ">
-                            <img src="../assets/images/profil-nav.svg" alt="" class="w-24 px-4 py-8 with-gradient hover-animation">
-
+                            class="flex flex-row items-center w-18 px-2 pb-2 pt-0 mt-0 text-sm font-semibold mr-[35px] ml-[35px] text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 ">
+                            <img src="../assets/images/profil-nav.svg" id="blah2"  alt="" class="w-[62px] mt-2  rounded-full h-[4rem] max-w-full mx-auto  ">
 
 
                         </button>
@@ -70,41 +53,18 @@
     <i class="fas fa-home"></i> Profil Maison
 </a>
 
-<a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 nav-link" href="#">
+<a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 nav-link" href="profile-user.php">
     <i class="fas fa-user"></i> Mon Profil
 </a>
-<a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 nav-link" href="deconnexion.php">
+<a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 nav-link" href="#">
     <i class="fas fa-power-off"></i> Déconnexion
 </a>
 
-
-
                                   <!-- ... Autres liens ... -->
-   
-
-      <?php
-        if(isset($_SESSION['nom'])){
-          echo '<a href="deconnexion.php" block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 nav-link" href="#">
-          <i class="fas fa-power-off"></i> Déconnexion">';
-          echo '';
-          echo '</a>';
-        } else {
-          // echo '<a href="signIn.php#" class="text-gray-600 hover:text-purple-300 text-lg font-semibold">';
-          // echo '<i class="fas fa-user"></i> S\'inscrire/se connecter';
-          // echo '</a>';
-      
-        }
-      ?> 
-    </div>                         </div>
+                            </div>
                         </div>
                     </div>
                 </nav>
             </div>
         </div>
     </header>
-
-  </header>
-
-  <!-- Le reste de votre contenu HTML ici -->
-</body>
-</html>

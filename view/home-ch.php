@@ -123,7 +123,7 @@
     <main>
 <?php  if(isset($_GET['msg'])){ echo $_GET['msg'] ;}  ?>
 <!--#region ACCUEIL  -->
-        <div class="container fenetre relative bg-[#96cde3] h-[90vh]">  
+        <div class="container fenetre relative bg-[#96cde3] min-w-full h-[90vh]">  
 
       <!-- birds -->  
         <div class="test w-full absolute"> 
@@ -149,7 +149,7 @@
             <p class="mx-auto w-[11.2rem] text-black relative md:w-full mt-6 mb-12"> Des tâches partagées, une colocation équilibrée </p>
             <div class="illust-propos flex flex-col h-24 items-center justify-between mt-28	md:flex-row md:justify-center">
                 <button class="bg-white md:mr-3"><a href="signIn.php">Créer un compte</a></button>
-                <button  class="bg-[#257EA7] text-white md:ml-3"><a href="signIn.php">Se connecter</a></button>
+                <button  class="bg-[#001e25] text-white md:ml-3"><a href="signIn.php">Se connecter</a></button>
             </div> 
             <div   class=" absolute inset-x-0 bottom-0" ><img src="../assets/images/maisons.svg" alt="image de maisons"></div>           
         </div> 
@@ -266,11 +266,11 @@
 
                         <div class="flex flex-col items-center md:flex-row">
                             <div class="flex flex-col w-1/2 items-center mb-6 md:mb-0">
-                                <button class="bg-[#257EA7] text-white ml-3">Télécharger sur</button>
+                                <button class="bg-[#001e25] text-white ml-3">Télécharger sur</button>
                                 <span class="font-bold justify-end">App Store</span>
                             </div>
                             <div class="flex flex-col w-1/2 items-center">
-                                <button class="bg-[#257EA7] text-white ml-3">Télécharger sur</button>
+                                <button class="bg-[#001e25] text-white ml-3">Télécharger sur</button>
                                 <span class="font-bold">Google Play</span>
                             </div>
                         </div>
@@ -285,10 +285,10 @@
 
 
      
-<footer class=" bg-[#257EA7]">
+<footer class=" bg-[#001e25]">
         <!-- This is an example component -->
     <div>
-        <div class="max-w-2xl mx-auto bg-[#257EA7] text-white  py-10">
+        <div class="max-w-2xl mx-auto bg-[#001e25] text-white  py-10">
             <div class="text-center">
                 <h3 class="text-3xl mb-3">Téléchargez notre application de gestion des tâches ménagères </h3>
                 <p> Des tâches partagées, une colocation équilibrée. </p>
@@ -310,7 +310,7 @@
                 </div>
             </div>
             <div class="mt-28 flex flex-col md:flex-row md:justify-between items-center text-sm text-white	">
-                <p class="order-2 md:order-1 mt-8 md:mt-0"> &copy; Copyright, 2023. </p>
+                <p class="order-2 md:order-1 mt-8 md:mt-0"> &copy; Colok, 2023. </p>
                 <div class="order-1 md:order-2">
                    
                     <span class="px-2">Politique de confidentialité</span>

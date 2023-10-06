@@ -6,8 +6,6 @@
 <head>
 <?php
 
-
-
     require('head.php');
 
 ?>

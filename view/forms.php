@@ -9,7 +9,9 @@
     <title>Formulaire d'inscription</title>
   </head>
   <body>
-    <form action="#" class="form">
+    <form action="../controller/maisonController.php" method="POST" class="form">
+
+      <input type="hidden" name="addMaison">
       <h1 class="text-center">Formulaire d'inscription</h1>
       <!-- Progress bar -->
       <div class="progressbar">
@@ -18,32 +20,49 @@
         <div
           class="progress-step progress-step-active"
           data-title="Profil Maison"></div>
-        <div class="progress-step" data-title="Mon Profil"></div>
-        <div class="progress-step" data-title="Profil Colocataires"></div>
+        <div class="progress-step" data-title="Supplément d'information"></div>
+       
         <div class="progress-step" data-title="Charte"></div>
         <!-- <div class="progress-step" data-title="Password"></div> -->
       </div>
 
       <!-- Steps -->
       <div class="form-step form-step-active">
-        <div class="display">
-          <div class="display-input">
-        <div class="input-group">
-          <label for="house-area">Surface de la maison</label>
-          <input type="text" name="house-area" id="house-area" />
-        </div>
-        <div class="input-group">
-          <label for="room">Pièces</label>
-          <input type="number" name="room" id="room" />
-        </div>
-        <div class="input-group">
-          <label for="garden">Jardin</label>
-          <input type="text" name="garden" id="garden" />
-        </div>
-        <div class="input-group">
-          <label for="bedroom">Nombre de Chambres</label>
-          <input type="number" name="bedroom" id="bedroom" />
-        </div>
+          <div class="display">
+            <div class="display-input">
+          <div class="input-group">
+            <label for="house-area">Surface de la maison</label>
+            <input type="number" name="house-area" id="house-area" />
+          </div>
+          <div class="input-group">
+            <label for="room">Pièces</label>
+            <input type="number" name="room" id="room" />
+          </div>
+          
+
+          <div class="input-group">
+            <label for="bedroom">Nombre de Chambres</label>
+            <input type="number" name="bedroom" id="bedroom" default="0" />
+          </div>
+          <div class="input-group">
+            <label for="adresse">Adresse</label>
+            <input type="text" name="adresse" id="adresse" />
+          </div>
+          <div class="input-group">
+            <label for="code_postal">Code postal</label>
+            <input type="text" name="code_postal" id="code_postal" />
+          </div>
+          <div class="input-group">
+            <label for="ville">Ville</label>
+            <input type="text" name="ville" id="ville" />
+          </div>
+          <div class="input-group">
+            <label for="description">Description</label>
+            <textarea name="description" id="description" cols="65" rows="10"></textarea>
+          </div>
+
+          
+          
         </div>
         <!-- <div class="input-checkbox">
           <div class="checkbox-right">
@@ -72,44 +91,7 @@
       Salle de bain partagée
     </label>
 </div> -->
-<div class="container-checkbox">
-<div class="container">
-            <input type="checkbox" id="input-1" class="check-input">
-            <label for="input-1" class="checkbox">
-                <svg viewBox="0 0 22 16" fill="none">
-                    <path d="M1 6.85L8.09677 14L21 1" />
-                </svg>
-            </label>
-            <span>Cuisine équipée</span>
-</div>
-<div class="container">
-            <input type="checkbox" id="input-2" class="check-input">
-            <label for="input-2" class="checkbox">
-                <svg viewBox="0 0 22 16" fill="none">
-                    <path d="M1 6.85L8.09677 14L21 1" />
-                </svg>
-            </label>
-            <span>Climatisation</span>
-</div>
-<div class="container">
-            <input type="checkbox" id="input-3" class="check-input">
-            <label for="input-3" class="checkbox">
-                <svg viewBox="0 0 22 16" fill="none">
-                    <path d="M1 6.85L8.09677 14L21 1" />
-                </svg>
-            </label>
-            <span>Chambre meublée</span>
-</div>
-<div class="container">
-            <input type="checkbox" id="input-4" class="check-input">
-            <label for="input-4" class="checkbox">
-                <svg viewBox="0 0 22 16" fill="none">
-                    <path d="M1 6.85L8.09677 14L21 1" />
-                </svg>
-            </label>
-            <span>Salle de bain partagée</span>
-</div>
-</div>
+
   </div>
   <div class="">
           <a href="#" class="btn btn-next width-50 ml-auto">Suivant</a>
@@ -124,62 +106,55 @@
       <div class="profile-picture">
         <img src="../assets/images/profile_img.png" alt="" />
       </div>
-      <div class="input-group">
-          <label for="firstname">Prénom<span>*</span></label>
-          <input type="text" name="firstname" id="firstname" />
-        </div>
-        <div class="input-group">
-        <label for="lastname">Nom<span>*</span></label>
-          <input type="text" name="lastname" id="lastname" />
-        </div>
-        <div class="input-group">
-          <label for="email">Adresse mail<span>*</span></label>
-          <input type="email" name="email" id="email" />
-        </div>
-        <div class="input-group">
-          <label for="job">Profession</label>
-          <input type="text" name="job" id="job" />
-        </div>
-        <div class="input-group">
-          <label for="schedule">Horaire</label>
-          <input type="text" name="schedule" id="schedule" />
-        </div>
-        <div class="input-group">
-          <label for="allergy">Allergies</label>
-          <input type="text" name="allergy" id="allergy" />
-        </div>
-        <div class="input-group">
-          <label for="animals">Animaux</label>
-          <input type="text" name="animals" id="animals" />
-        </div>
-        <div class="input-group">
-          <label for="event">Evènements à venir?</label>
-          <input type="text" name="event" id="event" />
-        </div>
+      <div class="container-checkbox">
+<div class="container">
+            
+            <select name="isCuisineEquipee" id="">
+              <option value="oui">Oui</option>
+              <option value="non">Non</option>
+            </select>
+            
+            <span>Cuisine équipée</span>
+</div>
+<div class="container">
+            <select name="jardin" id="">
+              <option value="oui">Oui</option>
+              <option value="non">Non</option>
+            </select>
+            
+            <span>Jardin</span>
+</div>
+<div class="container">
+            
+            <select name="isClim" id="">
+              <option value="oui">Oui</option>
+              <option value="non">Non</option>
+            </select>
+            <span>Climatisation</span>
+</div>
+<div class="container">
+            
+            <select name="isMeuble" id="">
+              <option value="oui">Oui</option>
+              <option value="non">Non</option>
+            </select>
+            <span>Chambre meublée</span>
+</div>
+<div class="container">
+           
+            <select name="isBainPartage" id="">
+              <option value="oui">Oui</option>
+              <option value="non">Non</option>
+            </select>
+            <span>Salle de bain partagée</span>
+</div>
+</div>
         <div class="btns-group">
           <a href="#" class="btn btn-prev">Précédent</a>
           <a href="#" class="btn btn-next">Suivant</a>
         </div>
       </div>
-      <div class="form-step">
-        <div class="profile-pictures">
-      <div class="profile-picture">
-        <img src="../assets/images/profile_img.png" alt="" />
-        <p class="profile-name">XXX</p>
-      </div>
-      <div class="profile-picture">
-        <img src="../assets/images/profile_img.png" alt="" />
-        <p class="profile-name">XXX</p>
-      </div>
-      <div class="profile-picture">
-        <img src="../assets/images/profile_img.png" alt="" />
-        <p class="profile-name">XXX</p>
-      </div>
-        </div>
-        <div class="btns-group">
-          <a href="#" class="btn btn-prev">Précédent</a>
-          <a href="#" class="btn btn-next">Suivant</a>
-        </div>
+  
       </div>
       <div class="form-step">
         <div class="rules-container">

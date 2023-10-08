@@ -1,18 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colok</title>
-        <link rel="stylesheet" type="text/css" href="../build/style/home-ch.css">
-    <link rel="stylesheet" href="../build/style/carrousel.css">
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.5/dist/full.css" rel="stylesheet" type="text/css"/>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="../javascript/carrousel.js" defer></script>
-    <script src="../javascript/home.js" defer></script>
 
+    <title>Colok - Accueil</title>
+    <?php require('headC.php');?>
+    <link rel="stylesheet" href="../build/styles/cards.css">
+    
 
     <script>
         tailwind.config = {
@@ -36,16 +29,19 @@
                 h2{
                    @apply text-4xl text-center text-black mb-6;
                 }
+                h3{
+                   @apply text-3xl text-center mb-6 ;
+                }
 
                 body{
-                  @apply text-gray-500 relative;
+                  @apply text-[#001e25] tracking-wide;
                 }
                
                 html {
                     @apply scroll-smooth scroll-pt-20;
                 }
                 button  {
-                    @apply text-black rounded-full h-8 w-36 font-medium z-10;
+                    @apply text-[#001e25] ml-3 rounded-full h-8 w-36 font-medium z-10  ;
                 }
 
             }
@@ -64,133 +60,115 @@
                 .app-short-desc{
                     @apply shadow-xl;
                 }
-                .carte{
-                  @apply h-96 w-80 my-14 bg-white rounded-3xl;
+
+                .card{
+                    @apply md:m-4;
                 }
-                 
+
+                .face{
+                    @apply px-8 rounded-lg h-64 w-full text-justify px-4 pb-2 pt-8;
+                }
+
+                .icon-didacticiel{
+                    @apply w-24 h-24 m-auto mb-6;
+                }
+                .app-desc{
+                    @apply italic leading-loose;
+                }
+                
                 
         }
           </style>
 
 </head>
 <body> 
+<?php require('nav.php'); ?>
 
-<!--#region NAV responsif -->
-<header class="sticky z-50 top-0 drop-shadow-md bg-white">
-    <div class="w-full text-gray-700  ">
-      <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-        <div class="p-4 flex flex-row items-center justify-between md:px-0 h-16">
-          <a href="#" class="visible w-1/2 text-lg focus:outline-none focus:shadow-outline md:invisible w-0 md:flex items-center">
-            <img src="../assets/images/logo-colok.svg" alt="logo du site pour aller à l'accueil" class="w-24 ">
-          </a>
-
-          <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
-            <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
-              <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-              <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-            </svg>
-          </button>
-
-        </div>
-
-        <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-around md:flex-row items-center md:mx-auto">
-          <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Boîte à idées</a>
-          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Planning</a>
-
-          <a class="h-0 invisible md:visible w-24 flex items-center" href="#"><img src="../assets/images/logo-colok.svg" alt="logo du site pour aller à l'accueil"></a>
-
-          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Déconnexion</a>
-          <div @click.away="open = false" class="relative" x-data="{ open: false }">
-
-    <!--:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: SOUS-MENU ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
-
-                <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-                  <!-- <span>Dropdown</span> -->
-                  <img src="../assets/images/profil-nav.svg" alt="" class="w-9">
-                </button>
-
-                <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute z-50 right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-40">
-
-                  <div class="px-2 py-2 bg-white rounded-md shadow">
-                    <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Profil maison</a>
-                    <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Mon profil</a>
-                  </div>
-                </div>
-
-          </div>    
-        </nav>
-      </div>
-    </div>
-</header>
-<!--#endregion -->
-
-    <main>
-
+<main>
+<?php  if(isset($_GET['msg'])){ echo $_GET['msg'] ;}  ?>
 <!--#region ACCUEIL  -->
-        <div class="container fenetre relative bg-[#96cde3] h-[90vh]">  
+        <div class="container fenetre relative bg-[#96cde3] min-w-full h-[180vh] md:h-[100vh]">  
 
-      <!-- birds -->  
-        <div class="test w-full absolute"> 
-          <div class="bird-container bird-container--one">
-            <div class="bird bird--one"></div>
-          </div>
-          <div class="bird-container bird-container--two">
-            <div class="bird bird--two"></div>
-          </div>          
-          <div class="bird-container bird-container--three">
-            <div class="bird bird--three"></div>
-          </div>
-          <div class="bird-container bird-container--four">
-            <div class="bird bird--four"></div>
-          </div>  
-    </div>
-    <!-- birds -->
-          
+       <!--birds-->
+
             <figure>
             </figure>
 
-            <img class=" mb-6 ml-auto mr-auto w-80 md:w-96" src="../assets/images/logo-colok.svg" alt="logo"> 
-            <p class="mx-auto w-[11.2rem] text-black relative md:w-full mt-6 mb-12"> Des tâches partagées, une colocation équilibrée </p>
+           <img class=" mb-6 ml-auto mr-auto w-80 md:w-96" src="../assets/images/logo-colok.svg" alt="logo">  
+              <!--#region CARTES  -->
+  <div class="container-cards">
+    <div class="container2 h-auto w-auto flex flex-col justify-evenly items-center  md:flex-row w-1/2 flex-wrap	">
+    <!--box-shadow: 0 16px 22px -17px #03153B;-->
 
+      <div class="card">
+        <div class="face face1">
+          <div class="content">
+            <div class="icon">
+              <img src="../assets/images/profil.svg" alt="icone du profil" class="icon-didacticiel">
+            </div>
+          </div>
+        </div>
+        <div class="face face2">
+              <div class="content">
+                <h3>Profil colocataire</h3>
+                <p>Découvrez vos futurs colocataires. Créez un profil unique pour mieux vous connaître et trouver la colocation parfaite.</p>
+              </div>
+        </div> 
+      </div>
 
-<div class="h-auto w-auto flex flex-col justify-evenly items-center  md:flex-row w-1/2 flex-wrap	">
+      <div class="card">
+        <div class="face face1">
+          <div class="content">
+            <div class="icon">
+              <img src="../assets/images/calendar.svg" alt="icone d'un calendrier" class="icon-didacticiel">
+            </div>
+          </div>
+        </div>
+        <div class="face face2">
+              <div class="content">
+                <h3>Planning des tâches</h3>
+                <p>Restez organisé et équitable. Planifiez et suivez les tâches ménagères et les responsabilités de manière transparente.</p>
+              </div>
+        </div> 
+      </div>
 
-<div class="carte">
-  <div class="px-8 rounded-lg h-64 w-full text-justify px-4 pb-2 pt-8">
-    <img src="../assets/images/profil.svg" alt="" class="w-24 h-24 m-auto mb-6">
+      <div class="card">
+        <div class="face face1">
+          <div class="content">
+            <div class="icon">
+              <img src="../assets/images/notif.svg" alt="icone de notifications" class="icon-didacticiel">
+            </div>
+          </div>
+        </div>
+        <div class="face face2">
+              <div class="content">
+                <h3>Notifications</h3>
+                <p>Restez informé et connecté. Recevez des notifications en temps réel sur les événements importants, les rappels de tâches et les mises à jour essentielles pour une colocation harmonieuse.</p>
+              </div>
+        </div> 
+      </div>
 
-    <h3>Profil colocataire</h3>
-    <p>Découvrez vos futurs colocataires. Créez un profil unique pour mieux vous connaître et trouver la colocation parfaite.</p>
+      <div class="card">
+        <div class="face face1">
+          <div class="content">
+            <div class="icon">
+              <img src="../assets/images/box.svg" alt="icone d'une boite" class="icon-didacticiel">
+            </div>
+          </div>
+        </div>
+        <div class="face face2">
+              <div class="content">
+                <h3>Boîte à idées</h3>
+                <p>Partagez vos idées, améliorez votre colocation. Proposez des suggestions et contribuez à rendre votre
+            maison encore meilleure.</p>
+              </div>
+        </div> 
+      </div>
+
+    </div>
   </div>
-</div>
-
-<div class="carte">
-  
-  <div class="px-8  h-64 w-full text-justify px-4 py-2 pt-8">
-    <img src="../assets/images/calendar.svg" alt="" class="w-24 h-24 m-auto mb-6">
-    <h3>Planning des tâches</h3>
-    <p>Restez organisé et équitable. Planifiez et suivez les tâches ménagères et les responsabilités de manière transparente.</p>
-  </div>
-</div>
-
-<div class="carte">
-  
-  <div class="px-8 rounded-lg h-64 w-full text-justify px-4 py-2 pt-8">
-    <img src="../assets/images/notif.svg" alt="" class="w-24 h-24 m-auto mb-6">
-    <h3>Notifications</h3>
-    <p>Restez informé et connecté. Recevez des notifications en temps réel sur les événements importants, les rappels de tâches et les mises à jour essentielles pour une colocation harmonieuse.</p>
-  </div>
-</div>
-
-<div class="carte">
-  
-  <div class="px-8 rounded-lg h-64 w-full text-justify px-4 py-2 pt-8">
-    <img src="../assets/images/box.svg" alt="" class="w-24 h-24 m-auto mb-6">
-    <h3>Boîte à idées</h3>
-    <p>Partagez vos idées, améliorez votre colocation. Proposez des suggestions et contribuez à rendre votre
-      maison encore meilleure.</p>
-  </div>
-</div>
+    
+ <!--#endregion -->
 
             <div   class=" absolute inset-x-0 bottom-0" ><img src="../assets/images/maisons.svg" alt="image de maisons"></div>           
         </div> 
@@ -198,35 +176,35 @@
 
 <!--#region A PROPOS  -->
   
-        <div class="fenetre h-[160vh] md:h-[100vh]">
+        <div class="fenetre h-[140vh] md:h-[80vh]">
           
           <div class="container-titre z-40">
             <h2>A propos</h2>
             <div class="trait w-40"></div>
           </div>  
-              <div class="flex flex-col items-center md:flex-row justify-around w-10/12	mx-auto">
-                <div class="anim-right rounded-full bg-[#E1F6FD]"><img src="../assets/images/about_illust.gif" alt="" class="rounded-full"> </div>
+          <div class="flex flex-col items-center md:flex-row justify-around w-10/12	mx-auto">
+            <div class="anim-right rounded-t-full rounded-b-lg shadow-lg bg-[#E1F6FD] md:w-1/3 mx-auto "><img src="../assets/images/about_illust.gif" alt="illustration d'un salon" class="rounded-full"> 
+          </div>
 
+            <p  class="p-propos text-justify leading-loose w-5/6 rounded-xl mt-16 px-6 md:w-1/3 mx-auto anim-left" id="animated-element">Chez Colok, nous savons que vivre en colocation peut être à la fois amusant et gratifiant, mais aussi stressant et difficile à gérer. C'est pourquoi nous avons créé cette plateforme de gestion de colocation pour faciliter la vie en communauté.
 
-                <p  class="p-propos text-justify w-5/6 rounded-xl px-6 md:w-2/5 mx-auto anim-left" id="animated-element">Chez Colok, nous savons que vivre en colocation peut être à la fois amusant et gratifiant, mais aussi stressant et difficile à gérer. C'est pourquoi nous avons créé cette plateforme de gestion de colocation pour faciliter la vie en communauté.
-
-                    Notre mission est de créer un environnement harmonieux où les colocataires peuvent vivre confortablement et en paix. Nous croyons que la communication et la collaboration sont essentielles pour une colocation réussie, c'est pourquoi notre plateforme offre des fonctionnalités de gestion des tâches ménagères, de la boîte à idée et de calendrier des événements.               
-                    Nous sommes une équipe de passionnés dévoués à rendre la vie en colocation plus agréable et plus facile. Nous travaillons dur pour offrir à nos utilisateurs une expérience de gestion de colocation sans stress et sans tracas.               
-                    Chez Colok, nous sommes convaincus que la vie en colocation peut être une expérience enrichissante et positive, et nous sommes fiers d'aider nos utilisateurs à en profiter pleinement.</p>      
-              </div>      
+                Notre mission est de créer un environnement harmonieux où les colocataires peuvent vivre confortablement et en paix. Nous croyons que la communication et la collaboration sont essentielles pour une colocation réussie, c'est pourquoi notre plateforme offre des fonctionnalités de gestion des tâches ménagères, de la boîte à idée et de calendrier des événements.               
+                Nous sommes une équipe de passionnés dévoués à rendre la vie en colocation plus agréable et plus facile. Nous travaillons dur pour offrir à nos utilisateurs une expérience de gestion de colocation sans stress et sans tracas.               
+                Chez Colok, nous sommes convaincus que la vie en colocation peut être une expérience enrichissante et positive, et nous sommes fiers d'aider nos utilisateurs à en profiter pleinement.</p>      
+          </div>      
         </div>
 <!--#endregion -->
 
 <!--#region AVIS  -->
 
-<div class="fenetre h-[100vh] md:h-[60vh]">
+  <div class="fenetre h-[100vh] md:h-[60vh]">
     
           <div class="container-titre relative flex flex-col items-center justify-around">
             <h2>Avis</h2>
             <div class="trait w-20"></div>
           </div>    
           
-<div class="taille-carrousel "> 
+  <div class="taille-carrousel "> 
     <div id="ProductPromotions" class="promotions"> </div>
         <div id="ServicesPromotions" class="promotions">
             <ul class="PromotionsList">
@@ -279,7 +257,7 @@
             </div>
         </div>
     </div>
-</div>
+  </div>
 <!--#endregion -->
 
 <!--#region Application  -->
@@ -299,7 +277,7 @@
                     <div class="w-5/6 md:px-20">
                         <div class="text-justify mb-8 ">
                           <img class="mb-2 logo-app w-40" src="../assets/images/logo-colok.svg" alt="logo">
-                          <span>Prêt à simplifier la vie en colocation ? Découvrez Colok, votre allié pour une colocation harmonieuse et sans tracas !
+                          <span class="leading-loose">Prêt à simplifier la vie en colocation ? Découvrez Colok, votre allié pour une colocation harmonieuse et sans tracas !
                           Finis les malentendus sur les tâches ménagères, les courses oubliées, et les calendriers d'événements chaotiques. Avec Colok, tout est organisé pour vous. Les tâches sont préassignées, les achats sont planifiés, et les événements sont coordonnés en un seul endroit.                 
                           Rejoignez notre communauté de colocataires satisfaits et vivez une colocation plus fluide et agréable. Téléchargez l'application dès maintenant et découvrez à quel point la vie en communauté peut être simple avec Colok.
                           </span>
@@ -307,11 +285,11 @@
 
                         <div class="flex flex-col items-center md:flex-row">
                             <div class="flex flex-col w-1/2 items-center mb-6 md:mb-0">
-                                <button class="bg-[#257EA7] text-white ml-3">Télécharger sur</button>
+                                <button class="bg-[#8ECAE6] hover:bg-[#001e25] hover:text-white">Télécharger sur</button>
                                 <span class="font-bold justify-end">App Store</span>
                             </div>
                             <div class="flex flex-col w-1/2 items-center">
-                                <button class="bg-[#257EA7] text-white ml-3">Télécharger sur</button>
+                                <button class="bg-[#8ECAE6] hover:bg-[#001e25] hover:text-white">Télécharger sur</button>
                                 <span class="font-bold">Google Play</span>
                             </div>
                         </div>
@@ -322,43 +300,9 @@
 
 <!--#endregion -->  
 
-    </main>
+</main>
 
-
-<footer class="bg-[#257EA7] absolute inset-x-0 bottom-0">
-        <!-- This is an example component -->
-    <div class="">
-        <div class="max-w-2xl mx-auto bg-[#257EA7] text-white  py-10">
-            <div class="text-center">
-                <h3 class="text-3xl mb-3">Téléchargez notre application de gestion des tâches ménagères </h3>
-                <p> Rester en forme. Toute la journée, tous les jours. </p>
-                <div class="flex justify-center my-10">
-                    <div class="flex items-center border w-auto rounded-lg px-4 py-2 w-52 mx-2">
-                        <img src="https://cdn-icons-png.flaticon.com/512/888/888857.png" class="w-7 md:w-8">
-                        <div class="text-left ml-3">
-                            <p class='text-xs text-white'>Télécharger sur </p>
-                            <p class="text-sm md:text-base"> Google Play Store </p>
-                        </div>
-                    </div>
-                    <div class="flex items-center border w-auto rounded-lg px-4 py-2 w-44 mx-2">
-                        <img src="https://cdn-icons-png.flaticon.com/512/888/888841.png" class="w-7 md:w-8">
-                        <div class="text-left ml-3">
-                            <p class='text-xs text-white'>Télécharger sur </p>
-                            <p class="text-sm md:text-base"> Apple Store </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="mt-28 flex flex-col md:flex-row md:justify-between items-center text-sm text-white	">
-                <p class="order-2 md:order-1 mt-8 md:mt-0"> &copy; Copyright, 2023. </p>
-                <div class="order-1 md:order-2">
-                   
-                    <span class="px-2">Politique de confidentialité</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-
+    <?php require('footer.php'); ?>
+     
 </body>
 </html>

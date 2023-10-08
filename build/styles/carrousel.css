@@ -12,7 +12,6 @@ body {
 .promotions {
   border-radius: 5px;
   padding: 0 15px;
-  background-color: #fff;
   position: relative;
   margin: 50px 50px;
 }
@@ -21,7 +20,6 @@ body {
   position: absolute;
   right: 20px;
   top: 8px;
-  color: #aaa;
   font-size: 14px;
   font-weight: 600;
 }
@@ -58,7 +56,7 @@ body {
 }
 .PromotionsList li .app-icon {
   border-radius: 100%;
-  background-color: #fff;
+  background-color: white;
   position: relative;
   top: 260px;
   height: 250px;
@@ -93,28 +91,12 @@ body {
   font-size: 18px;
   font-weight: 600;
 }
-.PromotionsList li .app-short-desc span.app-title .learn-button button:hover {
-  background-color: blue;
-  color: #fff;
-}
 .PromotionsList li .app-short-desc span.app-desc {
   display: block;
   margin: 8px 0;
   font-size: 16px;
   font-weight: 400;
   max-width: 700px;
-}
-.PromotionsList li .app-short-desc .learn-button {
-  display: block;
-}
-.PromotionsList li .app-short-desc .learn-button button {
-  padding: 10px 25px;
-  border: 1px solid blue;
-  border-radius: 5px;
-  background: #fff;
-  font-size: 16px;
-  color: blue;
-  cursor: pointer;
 }
 .PromotionsList li.active {
   z-index: 2;
@@ -171,7 +153,6 @@ body {
   .promotions {
     border-radius: 5px;
     padding: 0 15px;
-    background-color: #fff;
     position: relative;
     margin: 50px 50px;
     height: 75vh;
@@ -219,7 +200,6 @@ body {
   }
   .PromotionsList li .app-icon {
     border-radius: 100%;
-    background-color: #fff;
     position: relative;
     top: 260px;
     height: 250px;
@@ -245,7 +225,7 @@ body {
     padding-right: 3rem;
     padding-top: 7rem;
     border-radius: 2rem;
-    height: 20rem;
+    height: 24rem;
     width: 32rem;
     margin-left: auto;
     margin-right: auto;
@@ -256,10 +236,6 @@ body {
     margin: 8px 0;
     font-size: 18px;
     font-weight: 600;
-  }
-  .PromotionsList li .app-short-desc span.app-title .learn-button button:hover {
-    background-color: blue;
-    color: #fff;
   }
   .PromotionsList li .app-short-desc span.app-desc {
     display: block;
@@ -273,11 +249,9 @@ body {
   }
   .PromotionsList li .app-short-desc .learn-button button {
     padding: 10px 25px;
-    border: 1px solid blue;
     border-radius: 5px;
     background: #fff;
     font-size: 16px;
-    color: blue;
     cursor: pointer;
   }
   .PromotionsList li.active {

@@ -1,16 +1,12 @@
 @import "variables";
 
 $color_1: #aaa;
-$color_2: blue;
 $color_3: #fff;
-// $font-family_1: 'Open Sans', sans-serif;
 $background-color_1: #fff;
-$background-color_2: blue;
 $background-color_3: #ccc;
 $background-color_4: #eee;
 
 body {
-	// font-family: $font-family_1;
 	margin: 0;
 	padding: 0;
 }
@@ -22,7 +18,6 @@ body {
 .promotions {
 	border-radius: 5px;
 	padding: 0 15px;
-	background-color: $background-color_1;
 	position: relative;
 	margin: 50px 50px;
 }
@@ -30,7 +25,6 @@ body {
 	position: absolute;
 	right: 20px;
 	top: 8px;
-	color: $color_1;
 	font-size: 14px;
 	font-weight: 600;
 }
@@ -50,22 +44,10 @@ body {
 		width: 45rem;
 		height: 8rem;
 		z-index: 3;
-		// top: -25px;
         background-image: url(../../assets/images/guillemets.svg);
         background-repeat: no-repeat;
-		// background: rgb(187, 36, 36);
         background-position: center;
 	}
-	// &:after {
-	// 	content: '';
-	// 	position: absolute;
-	// 	width: 300px;
-	// 	height: 55px;
-	// 	z-index: 2;
-	// 	bottom: -25px;
-	// 	border-radius: 8px 8px 0 0;
-	// 	background: rgb(243,243,243);
-	// }
 	li {
 		display: flex;
 		align-items: center;
@@ -76,7 +58,7 @@ body {
 		z-index: 1;
 		.app-icon {
 			border-radius: 100%;
-			background-color: $background-color_1;
+			background-color: white;
 			position: relative;
 			top: 260px;
 			height: 250px;
@@ -110,14 +92,7 @@ body {
 				margin: 8px 0;
 				font-size: 18px;
 				font-weight: 600;
-				.learn-button {
-					button {
-						&:hover {
-							background-color: $background-color_2;
-							color: $color_3;
-						}
-					}
-				}
+	
 			}
 			span.app-desc {
 				display: block;
@@ -125,18 +100,6 @@ body {
 				font-size: 16px;
 				font-weight: 400;
 				max-width: 700px;
-			}
-			.learn-button {
-				display: block;
-				button {
-					padding: 10px 25px;
-					border: 1px solid blue;
-					border-radius: 5px;
-					background: #fff;
-					font-size: 16px;
-					color: $color_2;
-					cursor: pointer;
-				}
 			}
 		}
 	}
@@ -202,7 +165,6 @@ body {
 .promotions {
 	border-radius: 5px;
 	padding: 0 15px;
-	background-color: $background-color_1;
 	position: relative;
 	margin: 50px 50px;
     height: 75vh;
@@ -249,7 +211,6 @@ body {
 		z-index: 1;
 		.app-icon {
 			border-radius: 100%;
-			background-color: $background-color_1;
 			position: relative;
 			top: 260px;
 			height: 250px;
@@ -276,7 +237,7 @@ body {
             padding-right: 3rem;
             padding-top: 7rem;
             border-radius: 2rem;
-            height: 20rem;
+            height: 24rem;
             width: 32rem;	
             margin-left: auto;
             margin-right: auto;
@@ -288,14 +249,7 @@ body {
 				margin: 8px 0;
 				font-size: 18px;
 				font-weight: 600;
-				.learn-button {
-					button {
-						&:hover {
-							background-color: $background-color_2;
-							color: $color_3;
-						}
-					}
-				}
+
 			}
 			span.app-desc {
 				display: block;
@@ -308,11 +262,9 @@ body {
 				display: block;
 				button {
 					padding: 10px 25px;
-					border: 1px solid blue;
 					border-radius: 5px;
 					background: #fff;
 					font-size: 16px;
-					color: $color_2;
 					cursor: pointer;
 				}
 			}

@@ -2,14 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colok</title>
-    <link rel="stylesheet" href="../build/styles/boit-idee.css">
-    <script src="taches.js" defer></script>  
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.5/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Colok - >Boîte  à  idées</title>
+    <?php require('headC.php');?>
 
     <script>
         tailwind.config = {
@@ -64,20 +58,9 @@
 </head>
 
 <body>
+<?php require('nav.php'); ?>
 
-    <header class="sticky top-0 z-50 bg-white drop-shadow-md">
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">
-                        <img src="../assets/images/logo-colok.svg" alt="logo du site pour aller à l'accueil"
-                            class="w-32 m-auto h-20">
-                    </a>
-                </li>
-                </li>
-            </ul>
-        </nav>
-    </header>
+
 
     <main>
 
@@ -112,13 +95,8 @@
 
     </main>
 
-    <footer>
-        <!--Copyright section-->
-        <div class="bg-secondary-200 p-4 text-center text-secondary-700 shadow-md">
-            © 2023 Copyright:
-            <a class="text-secondary-800" href="https://tailwind-elements.com/">Tailwind Elements</a>
-        </div>
-    </footer>
+    <?php require('footer.php'); ?>
+
 
 
 

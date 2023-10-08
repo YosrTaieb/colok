@@ -1,16 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colok</title>
-    <script src="taches.js" defer></script>
-
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.5/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-
+    <title>Colok - Tâches ménagères</title>
+    <?php require('headC.php');?>
+   
     <script>
         tailwind.config = {
             theme: {
@@ -66,22 +60,12 @@
 
 <body>
 
-    <header class="h-20 sticky top-0 z-50 bg-white drop-shadow-md ">
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">
-                        <img src="../assets/images/logo-colok.svg" alt="logo du site pour aller à l'accueil"
-                            class="w-32 m-auto h-20">
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+<?php require('nav.php'); ?>
+
 
     <main>
 
-        <div class="fenetre relative min-h-[calc(100vh-170px)]">
+        <div class="fenetre min-h-[calc(100vh-170px)]">
 
             <a href="#"><img src="../assets/images/fleche-back.svg" alt="flèche de retour" class="w-10 md:ml-24"></a>
 
@@ -436,20 +420,12 @@
             <!--#endregion -->
 
 
-        </div>
-        
+        </div>            
+        <div><img src="../assets/images/maisons.svg" alt="image de maisons"></div>           
+   
     </main>
-
-    <footer>
-        <div class=""><img class="" src="../assets/images/maisons.svg" alt="image de maisons"></div>
-        <!--Copyright section-->
-        <div class="bg-secondary-200 p-4 text-center text-secondary-700 shadow-md">
-            © 2023 Copyright:
-            <a class="text-secondary-800" href="https://tailwind-elements.com/">Tailwind Elements</a>
-        </div>
-    </footer>
-
-
+    
+    <?php require('footer.php'); ?>
 
     <!-- lien js vers autre composants https://tailwind-elements.com/docs/standard/getting-started/quick-start/ -->
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>

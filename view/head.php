@@ -12,3 +12,5 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../build/styles/profile-user.css" />
     <link rel="stylesheet" href="../build/styles/signIn.css" />
+    <link rel="stylesheet" href="../sass/styles/nav.scss">
+    

@@ -25,7 +25,7 @@ if(isset($_POST['email'])){
     if ($data[0] && password_verify($password, $data[0]['mdp'])) {
 
     
-
+        $_SESSION['id'] = $data[0]['id'];
         $_SESSION["nom"] = $data[0]['nom'];
         $_SESSION["prenom"] = $data[0]['prenom'];
         $_SESSION["email"] = $data[0]['email'];

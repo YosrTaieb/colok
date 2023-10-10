@@ -33,6 +33,6 @@ function addMaison($adresse,$ville,$code_postal,$superficie,$nb_colocataire,$des
     // Fermeture de la connexion
     $conn = null;
 
-}
+} 
 
 ?>

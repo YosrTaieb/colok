@@ -30,7 +30,7 @@
                 }
 
                 body{
-                  @apply text-[#001e25] tracking-wide leading-loose;
+                  @apply text-[#001e25] tracking-wide leading-loose min-w-fit	;
                 }
                
                 html {
@@ -115,7 +115,7 @@
 
 <!--#region A PROPOS  -->
   
-        <div class="fenetre h-[140vh] md:h-[90vh]">
+        <div class="fenetre h-[150vh] bg-[#e3f6fd3d ] md:h-[90vh]">
           
           <div class="container-titre z-40">
             <h2>A propos</h2>
@@ -136,20 +136,20 @@
 
 <!--#region AVIS  -->
 
-<div class="fenetre h-[100vh] md:h-[70vh]">
+  <div class="fenetre h-[100vh] md:h-[70vh] bg-[url('../assets/images/wave.svg')] bg-no-repeat">
     
           <div class="container-titre relative flex flex-col items-center justify-around">
             <h2>Avis</h2>
             <div class="trait w-20"></div>
           </div>    
-          
-<div class="taille-carrousel "> 
+           
+  <div class="taille-carrousel "> 
     <div id="ProductPromotions" class="promotions"> </div>
         <div id="ServicesPromotions" class="promotions">
             <ul class="PromotionsList">
               <li class="active" data-slide-value="1">
                 <span class="app-icon">
-                  <img src="../assets/images/ph-avis2.jpg" alt="photo d'une personne"/>
+                  <img src="../assets/images/ph-avis2.jpg" alt="photo de profil d'une personne"/>
                 </span>
                 <span class="app-short-desc">
                   <span class="app-title">
@@ -162,7 +162,7 @@
               </li>
               <li data-slide-value="2">
                 <span class="app-icon">
-                  <img src="../assets/images/ph-avis3.jpg" alt=""/>
+                  <img src="../assets/images/ph-avis3.jpg" alt="photo de profil d'une personne"/>
                 </span>
                 <span class="app-short-desc">
                   <span class="app-title">
@@ -176,7 +176,7 @@
               </li>
               <li data-slide-value="3">
                 <span class="app-icon">
-                  <img src="../assets/images/ph-avis1.png" alt=""/>
+                  <img src="../assets/images/ph-avis1.png" alt="photo de profil d'une personne"/>
                 </span>
                 <span class="app-short-desc">
                   <span class="app-title">
@@ -196,7 +196,7 @@
             </div>
         </div>
     </div>
-</div>
+  </div>
 <!--#endregion -->
 
 <!--#region Application  -->

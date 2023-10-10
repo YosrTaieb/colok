@@ -23,6 +23,41 @@ main {
   position: relative;
 }
 
+<<<<<<< HEAD
+=======
+.circle {
+  border-radius: 50%;
+  position: absolute;
+}
+.circle-green {
+  width: 500px;
+  height: 500px;
+  background-color: #8CB369;
+  top: 190px;
+  z-index: -1;
+  opacity: 0.4;
+}
+.circle-purple {
+  width: 400px;
+  height: 400px;
+  background-color: #C9A1FF;
+  right: 0;
+  top: 80vh;
+  z-index: -1;
+  opacity: 0.5;
+}
+.circle-blue {
+  width: 200px;
+  height: 200px;
+  background-color: #8ECAE6;
+  right: 200px;
+  top: 180px;
+  transform: translateY(-50%);
+  z-index: -1;
+  opacity: 0.5;
+}
+
+>>>>>>> refs/remotes/origin/dev
 .profile {
   width: 65%;
   margin: 0 auto;

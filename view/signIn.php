@@ -7,7 +7,8 @@ session_start();
 <html lang="en">
 <head>
     <?php include('head.php'); ?>
-    <script src="../js/app.js" defer></script>
+    <script src="../js/animationSignIn.js" defer></script>
+  
     <title>Connexion & Inscriptions</title>
 
     <?php if(isset($_GET['test'])){
@@ -28,16 +29,16 @@ session_start();
                 <div class="signin-signup">
                   
                     <!-- Formulaire de Connexion -->
-                    <form action="../controller/utilisateurController.php" class="sign-in-form">
+                    <form action="../controller/loginController.php" method="POST" class="sign-in-form">
                         <h2 class="title">Se connecter</h2>
                  
                         <div class="input-field">
                             <i class="fa fa-envelope"></i>
-                            <input type="text" placeholder="Adresse email">
+                            <input type="text" placeholder="Adresse email" name='email'>
                         </div>
                         <div class="input-field">
                             <i class="fas fa-lock"></i>
-                            <input type="password" placeholder="Mot de passe">
+                            <input type="password" placeholder="Mot de passe" name="mdp">
                         </div>
                         <input type="submit" value="Connexion" class="btn solid">
                         <p class="social-text">Ou connectez-vous avec des réseaux sociaux</p>

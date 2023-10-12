@@ -24,7 +24,7 @@
                     <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent text-gray-900 rounded-lg md:mt-0 nav-link" href="#">
                         <i class="fas fa-lightbulb"></i> Boîte à idées
                     </a>
-                    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 nav-link" href="../schedule/schedule/">
+                    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 nav-link" href="../view/calendrier.php">
                         <i class="far fa-calendar-alt"></i> Planning 
                     </a>
                     <a class="h-0 invisible md:visible w-32 flex items-center">

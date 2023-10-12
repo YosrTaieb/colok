@@ -17,7 +17,7 @@
     <script src="./fullcalendar/lib/main.min.js"></script>
     <style>
         :root {
-            --bs-success-rgb: 71, 222, 152 !important;
+            --bs-primary-rgb: 71, 222, 152 !important;
         }
 
         html,

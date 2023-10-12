@@ -42,7 +42,7 @@
       <div class="profile">
         <p>Information personnelle</p>
         
-        <form class="profile-form" action="">
+        <form class="profile-form" action="POST">
        
                                    
                                     <input type="file" id="imageFile" name="fileToUpload" accept="image/*" style="display: none;">

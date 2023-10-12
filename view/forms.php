@@ -23,7 +23,6 @@
         <div class="progress-step" data-title="Supplément d'information"></div>
        
         <div class="progress-step" data-title="Charte"></div>
-        <!-- <div class="progress-step" data-title="Password"></div> -->
       </div>
 
       <!-- Steps -->
@@ -61,37 +60,7 @@
             <textarea name="description" id="description" cols="65" rows="10"></textarea>
           </div>
 
-          
-          
         </div>
-        <!-- <div class="input-checkbox">
-          <div class="checkbox-right">
-    
-    <label for="choice1">
-      <input class="checkbox" type="checkbox" id="choice1" name="contact" value="kitchen" />
-      Cuisine équipée
-    </label>
-</div>
-<div class="checkbox-right">
-    <label for="choice2">
-      <input class="checkbox" type="checkbox" id="choice2" name="contact" value="air-conditioning" />
-      Climatisation
-    </label></div>
-<div class="checkbox-right">
-    
-    <label for="choice3">
-      <input class="checkbox" type="checkbox" id="choice3" name="contact" value="room" />
-      Chambre meublée
-    </label>
-</div>
-<div class="checkbox-right">
-    
-    <label for="choice3">
-      <input class="checkbox" type="checkbox" id="choice4" name="contact" value="bathroom" />
-      Salle de bain partagée
-    </label>
-</div> -->
-
   </div>
   <div class="">
           <a href="#" class="btn btn-next width-50 ml-auto">Suivant</a>
@@ -100,8 +69,6 @@
         
       </div>
      
-
-    
       <div class="form-step">
       <div class="profile-picture">
         <img src="../assets/images/profile_img.png" alt="" />

@@ -34,7 +34,7 @@
                 }
 
                 body{
-                  @apply text-[#001e25] tracking-wide;
+                  @apply text-[#001e25] tracking-wide  min-w-fit;
                 }
                
                 html {
@@ -87,7 +87,7 @@
 <main>
 <?php  if(isset($_GET['msg'])){ echo $_GET['msg'] ;}  ?>
 <!--#region ACCUEIL  -->
-        <div class="container fenetre relative bg-[#96cde3] min-w-full h-[180vh] md:h-[100vh]">  
+        <div class="container fenetre relative bg-[#96cde3] min-w-full h-[220vh] md:h-[100vh]">  
 
        <!--birds-->
 
@@ -176,7 +176,7 @@
 
 <!--#region A PROPOS  -->
   
-        <div class="fenetre h-[140vh] md:h-[80vh]">
+        <div class="fenetre h-[150vh] md:h-[80vh]">
           
           <div class="container-titre z-40">
             <h2>A propos</h2>

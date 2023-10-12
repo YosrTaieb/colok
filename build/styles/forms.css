@@ -126,14 +126,6 @@ label span {
 .form-step-active {
   display: block;
 }
-.form .display {
-  display: flex;
-  flex-wrap: wrap;
-}
-.form .display-input {
-  width: 50%;
-  margin-right: 5%;
-}
 .form .input-checkbox {
   display: flex;
   flex-direction: column;

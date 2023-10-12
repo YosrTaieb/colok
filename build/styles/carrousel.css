@@ -274,7 +274,7 @@ body {
     position: absolute;
     right: 15rem;
     text-align: right;
-    bottom: 0%;
+    bottom: -12%;
     z-index: 3;
     display: flex;
     flex-direction: row;

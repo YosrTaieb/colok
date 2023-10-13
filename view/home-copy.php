@@ -176,7 +176,7 @@
 
 <!--#region A PROPOS  -->
   
-        <div class="fenetre h-[150vh] md:h-[80vh]">
+        <div class="fenetre h-[150vh] md:h-[86vh]">
           
           <div class="container-titre z-40">
             <h2>A propos</h2>
@@ -197,9 +197,10 @@
 
 <!--#region AVIS  -->
 
-  <div class="fenetre h-[100vh] md:h-[60vh]">
+  <div class="fenetre bg-[url('../assets/images/vaguebleu.svg')] bg-no-repeat bg-cover	h-[120vh] md:h-[90vh] ">
+    <!-- <img src="../assets/images/vague-blache.svg" alt="" class="absolute -mt-[5rem]"> -->
     
-          <div class="container-titre relative flex flex-col items-center justify-around">
+          <div class="container-titre relative flex flex-col items-center justify-around z-20 mt-[9rem]">
             <h2>Avis</h2>
             <div class="trait w-20"></div>
           </div>    
@@ -207,10 +208,10 @@
   <div class="taille-carrousel "> 
     <div id="ProductPromotions" class="promotions"> </div>
         <div id="ServicesPromotions" class="promotions">
-            <ul class="PromotionsList">
-              <li class="active" data-slide-value="1">
+            <ul class="PromotionsList ">
+              <li class="active " data-slide-value="1">
                 <span class="app-icon">
-                  <img src="../assets/images/ph-avis2.jpg" alt="photo d'une personne"/>
+                  <img src="../assets/images/ph-avis2.jpg" alt="photo d'un utilisateur"/>
                 </span>
                 <span class="app-short-desc">
                   <span class="app-title">
@@ -223,7 +224,7 @@
               </li>
               <li data-slide-value="2">
                 <span class="app-icon">
-                  <img src="../assets/images/ph-avis3.jpg" alt=""/>
+                  <img src="../assets/images/ph-avis3.jpg" alt="photo d'un utilisateur"/>
                 </span>
                 <span class="app-short-desc">
                   <span class="app-title">
@@ -237,7 +238,7 @@
               </li>
               <li data-slide-value="3">
                 <span class="app-icon">
-                  <img src="../assets/images/ph-avis1.png" alt=""/>
+                  <img src="../assets/images/ph-avis1.png" alt="photo d'un utilisateur"/>
                 </span>
                 <span class="app-short-desc">
                   <span class="app-title">
@@ -263,7 +264,9 @@
 <!--#region Application  -->
 
         <div class="fenetre">
-          <div class="container-titre relative flex flex-col items-center justify-around">
+        <!-- <img src="../assets/images/vague-bleu.svg" alt="" class="absolute -mt-[5rem]"> -->
+
+          <div class="container-titre relative flex flex-col items-center justify-around z-20 mt-[0rem]">
               <h2>Application</h2>
               <div class="trait w-48"></div>
           </div>  

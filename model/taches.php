@@ -1,11 +1,12 @@
 <?php 
-  
+
+    
     
     require('../model/connexion.php');
 
 
     function listeTache(){
-        
+        if(isset($_SESSION)){
         $user_id = $_SESSION['id'];
     
         $conn = connexion();
@@ -15,9 +16,9 @@
         $data = $stmt->fetchAll();
         return $data;
         
-    
+        
+        }
     }
-
     function addTache($TypeTache ,$interval,$occurence,$user_id){
         $conn = connexion();
         $data = [

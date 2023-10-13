@@ -19,11 +19,15 @@
        <?php include("nav.php")?>
      
     </header>
+<<<<<<< HEAD
 <!-- <div class="background">
     <div class="circle circle-green"></div>
     <div class="circle circle-purple"></div>
     <div class="circle circle-blue"></div>
 </div> -->
+=======
+
+>>>>>>> b7a934ff3fe27c12a50c37c05096ae0a1e322c4d
     <main class="">
       <h1 class="page-title">Mon profil</h1>
       <div class="profile-picture">  
@@ -36,7 +40,7 @@
       <div class="profile">
         <p>Information personnelle</p>
         
-        <form class="profile-form" action="">
+        <form class="profile-form" action="POST">
        
                                    
                                     <input type="file" id="imageFile" name="fileToUpload" accept="image/*" style="display: none;">

@@ -185,4 +185,18 @@ footer {
   margin-top: 2rem;
 }
 
+.form-btn {
+  background-color: #8ECAE6;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style au survol */
+.form-btn:hover {
+  background-color: rgb(76, 76, 225);
+}
+
 /*# sourceMappingURL=profile.css.map */

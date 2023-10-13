@@ -136,9 +136,9 @@
 
 <!--#region AVIS  -->
 
-  <div class="fenetre h-[100vh] md:h-[70vh] bg-[url('../assets/images/wave.svg')] bg-no-repeat">
+  <div class="fenetre  bg-[url('../assets/images/vaguebleu.svg')] bg-no-repeat bg-cover	h-[120vh] md:h-[90vh]">
     
-          <div class="container-titre relative flex flex-col items-center justify-around">
+          <div class="container-titre relative flex flex-col items-center justify-around z-20 mt-[9rem]">
             <h2>Avis</h2>
             <div class="trait w-20"></div>
           </div>    

@@ -19,11 +19,7 @@
        <?php include("nav.php")?>
      
     </header>
-<div class="background">
-    <div class="circle circle-green"></div>
-    <div class="circle circle-purple"></div>
-    <div class="circle circle-blue"></div>
-</div>
+
     <main class="">
       <h1 class="page-title">Mon profil</h1>
       <div class="profile-picture">  

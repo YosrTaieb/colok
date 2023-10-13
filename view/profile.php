@@ -10,7 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src="../js/app.js"></script>
+    <script src="../js/app.js"defer></script>
     <!-- <script src="../js/forms.js" defer></script> -->
     <link rel="stylesheet" href="../build/styles/nav.css" />
     <title>Profil utilisateur</title>
@@ -19,6 +19,7 @@
    <header class="w-full text-gray-700 bg-white sticky z-50 top-0 drop-shadow-md">
      <?php include("nav.php")?>
    </header>
+
     <div class="container-title z-40">
     <h1 class="page-title">Mon profil</h1>
     <div class="trait w-40"></div>
@@ -28,47 +29,50 @@
         <img src="../assets/images/profile_img.png" id="blah" alt=""> 
         <i id="mon-icon" class="fas fa-camera"></i>
     </a>
-</div>
-    
-    <form action="" method="" class="form">
+</div> <form action="POST" class="form">
+<input type="file" id="imageFile" name="fileToUpload" accept="image/*" style="display: none;">
+                               
+   
       <h2 class="form-title">Information personnelle</h2>
 
       <div class="form-step form-step-active">
-          <div class="display">
-            <div class="display-input">
-              <div class="name-container">
-                <div class="input-group-name">
-            <label for="lastname">Nom<span>*</span></label>
-            <input type="text" name="lastname" id="lastname" required/>
-          </div>
-          <div class="input-group-name">
-            <label for="firstname">Prénom<span>*</span></label>
-            <input type="text" name="firstname" id="firstname" required/>
-          </div>
-              </div>
-          
-          <div class="input-group">
-            <label for="email">Adresse mail<span>*</span></label>
-            <input type="email" name="email" id="email" default="0" required/>
-          </div>
-          <div class="input-group">
-            <label for="job">Profession</label>
-            <input type="text" name="job" id="job" />
-          </div>
-          <div class="input-group">
-            <label for="schedule">Horaire<span>*</span></label>
-            <input type="text" name="schedule" id="schedule"required/>
-          </div>
-          <div class="input-group">
-            <label for="allergy">Allergies</label>
-            <input type="text" name="allergy" id="allergy" />
-          </div>
-          <div class="input-group">
-            <label for="event">Evènements à venir</label>
-            <input type="text" name="event" id="event" />
-          </div>
+  <div class="display">
+    <div class="display-input">
+      <div class="name-container">
+        <div class="input-group-name">
+          <label for="lastname"><i class="fas fa-user"></i> Nom<span>*</span></label>
+          <input type="text" name="lastname" id="lastname" required placeholder="Votre nom"/>
         </div>
+        <div class="input-group-name">
+          <label for="firstname"><i class="fas fa-user"></i> Prénom<span>*</span></label>
+          <input type="text" name="firstname" id="firstname" required placeholder="Votre prénom"/>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="email"><i class="fas fa-envelope"></i> Adresse mail<span>*</span></label>
+        <input type="email" name="email" id="email" required placeholder="Votre adresse e-mail"/>
+      </div>
+      <div class="input-group">
+        <label for="job"><i class="fas fa-briefcase"></i> Profession</label>
+        <input type="text" name="job" id="job" placeholder="Votre profession"/>
+      </div>
+      <div class="input-group">
+        <label for="schedule"><i class="far fa-clock"></i> Horaire<span>*</span></label>
+        <input type="text" name="schedule" id="schedule" required placeholder="Votre horaire"/>
+      </div>
+      <div class="input-group">
+        <label for="allergy"><i class="fas fa-allergies"></i> Allergies</label>
+        <input type="text" name="allergy" id="allergy" placeholder="Vos allergies"/>
+      </div>
+      <div class="input-group">
+        <label for="event"><i class="far fa-calendar-alt"></i> Évènements à venir</label>
+        <input type="text" name="event" id="event" placeholder="Vos évènements à venir"/>
+      </div>
+      <button class="form-btn">Valider</button>
+    </div>
   </div>
+</div>
     </form>
     <!-- <div class="house">
       <img src="../assets/images/house_footer.svg" alt="">

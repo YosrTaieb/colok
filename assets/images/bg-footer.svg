@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="bg-20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 774 843.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #001e25;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="m774,221.41H0v-65.23c239-89.34,520-89.34,774,.67v64.56Z"/>
+  <rect class="cls-1" y="192.87" width="774" height="501.13"/>
+</svg>

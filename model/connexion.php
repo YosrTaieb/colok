@@ -3,7 +3,7 @@
 function connexion(){
     $servername = "localhost";
     $username = "root";
-    $password = "root";
+    $password = "";
     $dbname = "colok_db";
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

@@ -1,36 +1,101 @@
-<footer  class="bg-[url('../assets/images/svg-animation-waves.svg')] bg-no-repeat bg-[center_top_-4rem] pt-12 bg-cover h-full md:bg-[center_top_-13rem]">
-        <!-- This is an example component -->
-        <!-- bg-[url('../assets/images/footer-bg.svg')] -->
-        <!-- ../assets/images/footer-bg.svg -->
-    <div class= "bg-[#12355b]">
-        <div class="max-w-2xl mx-auto bg-transparent text-white  py-10">
-            <div class="text-center ">
-                <h3 class="text-3xl mb-3">Téléchargez notre application de gestion des tâches ménagères </h3>
-                <p> Des tâches partagées, une colocation équilibrée. </p>
-                <div class="flex justify-center my-10">
-                    <div class="flex items-center border w-auto rounded-lg px-4 pt-[3.5] pb-0 w-52 mx-2">
-                        <img src="https://cdn-icons-png.flaticon.com/512/888/888857.png" class="w-7 md:w-8">
-                        <div class="text-left ml-3">
-                            <p class='text-xs text-white'>Télécharger sur </p>
-                            <p class="text-sm md:text-base"> Google Play Store </p>
-                        </div>
-                    </div>
-                    <div class="flex items-center border w-auto rounded-lg px-4 py-2 w-44 mx-2">
-                        <img src="https://cdn-icons-png.flaticon.com/512/888/888841.png" class="w-7 md:w-8">
-                        <div class="text-left ml-3">
-                            <p class='text-xs text-white'>Télécharger sur </p>
-                            <p class="text-sm md:text-base"> Apple Store </p>
-                        </div>
-                    </div>
+
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        footer {
+            background: url('../assets/images/svg-animation-waves.svg') center top -4rem no-repeat;
+            background-size: cover;
+            padding-top: 8rem;
+            height: 100%;
+            background-position: center top -13rem; /* Pour les écrans larges */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-content {
+            text-align: center;
+            color: white;
+        }
+
+        h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        .app-download {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .download-button {
+            display: flex;
+            align-items: center;
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 5px;
+            margin: 0 10px;
+        }
+
+        .download-button img {
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        .download-button p {
+            font-size: 1rem;
+        }
+
+        .copyright {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 0.5rem;
+            color: white;
+            font-size: 0.8rem;
+        }
+
+        .copyright a {
+            text-decoration: none;
+            color: white;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <h3>Téléchargez notre application de gestion des tâches ménagères</h3>
+            <p>Des tâches partagées, une colocation équilibrée.</p>
+            <div class="app-download">
+                <div class="download-button">
+                    <img src="https://cdn-icons-png.flaticon.com/512/888/888857.png" alt="Google Play Store">
+                    <p>Télécharger sur Google Play Store</p>
                 </div>
-            </div>
-            <div class="mt-28 flex flex-col md:flex-row md:justify-between items-center text-sm text-white  ">
-                <p class="order-2 md:order-1 mt-8 md:mt-0"> &copy; Colok, 2023. </p>
-                <div class="order-1 md:order-2">
-                   
-                    <span class="px-2">Politique de confidentialité</span>
+                <div class="download-button">
+                    <img src="https://cdn-icons-png.flaticon.com/512/888/888841.png " alt="Apple Store">
+                    <p>Télécharger sur Apple Store</p>
                 </div>
             </div>
         </div>
+        <div class="copyright">
+            &copy; Colok, 2023.
+            <a href="#">Politique de confidentialité</a>
+        </div>
     </div>
 </footer>
+</body>
+</html>

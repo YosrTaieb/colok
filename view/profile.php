@@ -29,7 +29,13 @@
         <img src="../assets/images/profile_img.png" id="blah" alt=""> 
         <i id="mon-icon" class="fas fa-camera"></i>
     </a>
-</div> <form action="POST" class="form">
+</div> 
+<div class="form-wrapper">
+<div class="form-illustration">
+  <img src="../assets/images/illust-profil.gif" alt="">
+</div>
+
+<form action="POST" class="form">
 <input type="file" id="imageFile" name="fileToUpload" accept="image/*" style="display: none;">
                                
    
@@ -40,40 +46,43 @@
     <div class="display-input">
       <div class="name-container">
         <div class="input-group-name">
-          <label for="lastname"><i class="fas fa-user"></i> Nom<span>*</span></label>
+          <label for="lastname"><i class="fas fa-user"></i>Nom<span>*</span></label>
           <input type="text" name="lastname" id="lastname" required placeholder="Votre nom"/>
         </div>
         <div class="input-group-name">
-          <label for="firstname"><i class="fas fa-user"></i> Prénom<span>*</span></label>
+          <label for="firstname"><i class="fas fa-user"></i>Prénom<span>*</span></label>
           <input type="text" name="firstname" id="firstname" required placeholder="Votre prénom"/>
         </div>
       </div>
 
       <div class="input-group">
-        <label for="email"><i class="fas fa-envelope"></i> Adresse mail<span>*</span></label>
+        <label for="email"><i class="fas fa-envelope"></i>Adresse mail<span>*</span></label>
         <input type="email" name="email" id="email" required placeholder="Votre adresse e-mail"/>
       </div>
       <div class="input-group">
-        <label for="job"><i class="fas fa-briefcase"></i> Profession</label>
+        <label for="job"><i class="fas fa-briefcase"></i>Profession</label>
         <input type="text" name="job" id="job" placeholder="Votre profession"/>
       </div>
       <div class="input-group">
-        <label for="schedule"><i class="far fa-clock"></i> Horaire<span>*</span></label>
+        <label for="schedule"><i class="far fa-clock"></i>Horaire<span>*</span></label>
         <input type="text" name="schedule" id="schedule" required placeholder="Votre horaire"/>
       </div>
       <div class="input-group">
-        <label for="allergy"><i class="fas fa-allergies"></i> Allergies</label>
+        <label for="allergy"><i class="fas fa-allergies"></i>Allergies</label>
         <input type="text" name="allergy" id="allergy" placeholder="Vos allergies"/>
       </div>
       <div class="input-group">
-        <label for="event"><i class="far fa-calendar-alt"></i> Évènements à venir</label>
+        <label for="event"><i class="far fa-calendar-alt"></i>Évènements à venir</label>
         <input type="text" name="event" id="event" placeholder="Vos évènements à venir"/>
       </div>
+      <div class="btn-center">
       <button class="form-btn">Valider</button>
+    </div>
     </div>
   </div>
 </div>
     </form>
+    </div>
     <!-- <div class="house">
       <img src="../assets/images/house_footer.svg" alt="">
   </div> -->

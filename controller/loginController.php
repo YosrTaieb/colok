@@ -30,6 +30,8 @@ if(isset($_POST['email'])){
         $_SESSION["prenom"] = $data[0]['prenom'];
         $_SESSION["email"] = $data[0]['email'];
         $_SESSION["age"] = $data[0]['age'];
+        $_SESSION["maison_id"] = $data[0]['maison_id'];
+
 
 
 

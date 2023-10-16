@@ -1,5 +1,5 @@
 <?php 
-    require('../model/connexion.php');
+    require_once('../model/connexion.php');
 
 
     function addUtilisateur($nom,$prenom,$date_naissance,$email,$mdp){
@@ -27,6 +27,19 @@
 
         // Fermeture de la connexion
         $conn = null;
+    }
+
+    function getUserByMaison($maison_id){
+        $conn = connexion();
+
+        // Requête pour obtenir les tâches liées à l'utilisateur actuel
+        $sql = "SELECT * FROM utilisateur where maison_id = :maison_id ";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':maison_id', $maison_id);
+        $stmt->execute();
+
+        $data = $stmt->fetchAll();
+        return $data;
     }
 
 

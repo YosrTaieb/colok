@@ -89,8 +89,6 @@
 
             </form>
             
-
-            <div class="absolute inset-x-0 bottom-0"><img src="../assets/images/maisons.svg" alt="image de maisons"></div>
         </div>
 
     </main>

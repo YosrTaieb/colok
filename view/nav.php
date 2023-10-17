@@ -21,13 +21,13 @@
                 </div>
 
                 <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-around md:flex-row items-center md:mx-auto">
-                    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent text-gray-900 rounded-lg md:mt-0 nav-link" href="#">
+                    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent text-gray-900 rounded-lg md:mt-0 nav-link" href="form-idees.php">
                         <i class="fas fa-lightbulb"></i> Boîte à idées
                     </a>
-                    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 nav-link" href="../view/calendrier.php">
+                    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 nav-link" href="calendrier.php">
                         <i class="far fa-calendar-alt"></i> Planning 
                     </a>
-                    <a class="h-0 invisible md:visible w-32 flex items-center">
+                    <a class="h-0 invisible md:visible w-32 flex items-center" href="home-connecte.php">
                     <img src="../assets/images/logo-colok.svg"  alt="logo du site pour aller à l'accueil" class="w-24 m-auto h-24 sm:w-auto sm:m-0 sm:h-auto">
                     </a>
                     <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 nav-link" href="signIn.php">

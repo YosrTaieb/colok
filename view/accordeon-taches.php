@@ -421,7 +421,6 @@
 
 
         </div>            
-        <div><img src="../assets/images/maisons.svg" alt="image de maisons"></div>           
    
     </main>
     

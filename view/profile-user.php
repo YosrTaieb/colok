@@ -19,7 +19,6 @@
        <?php include("nav.php")?>
      
     </header>
-
     <main class="">
       <h1 class="page-title">Mon profil</h1>
       <div class="profile-picture">  

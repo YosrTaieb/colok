@@ -1,11 +1,24 @@
 
 <?php
-require_once('../model/connexion.php');
+session_start();
+include('../model/taches.php');
+include('../model/utilisateur.php');
 
 // Vérifiez si 'msg' existe dans la requête GET
 $msg = isset($_GET['msg']) ? $_GET['msg'] : '';
 
+$maison_id = isset($_SESSION['maison_id']) ? $_SESSION['maison_id'] : null;
+
+if ($maison_id !== null) {
+    // La clé 'maison_id' existe dans la session, et sa valeur est maintenant stockée dans $maison_id.
+    $utilisateurs = getUserByMaison($maison_id);
+} else {
+    // La clé 'maison_id' n'existe pas dans la session, redirigez vers signIn.php
+    header('Location: signIn.php');
+    exit; // Assurez-vous de terminer le script après la redirection
+}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -77,15 +90,30 @@ $msg = isset($_GET['msg']) ? $_GET['msg'] : '';
             <div class="col-md-9">
                 <div id="calendar"></div>
             </div>
-            <div class="col-md-3">
+            
+            <div class="col-md-3"  >
                 <div class="card rounded-0 shadow">
                     <div class="card-header bg-gradient bg-primary text-light">
+                       
                         <h5 class="card-title">Planning formulaire</h5>
                     </div>
                     <div class="card-body">
                         <div class="container-fluid">
                             <form action="../model/saveCalendar.php" method="post" id="schedule-form">
                                 <input type="hidden" name="id" value="">
+                                <div class="form-group mb-2">
+                                    <label for="type" class="control-label">Type</label>
+                                    <select name="type" id="type">
+                                        <option value="tache">Tâche</option>
+                                        <option value="evenement">évenement</option>
+                                        <option value="autre">Autre</option>
+                                    </select>
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label for="type_tache" class="control-label">Type de tâche</label>
+                                    <input type="text" class="form-control form-control-sm rounded-0" name="type_tache"
+                                        id="type_tache" required>
+                                </div>
                                 <div class="form-group mb-2">
                                     <label for="title" class="control-label">Titre</label>
                                     <input type="text" class="form-control form-control-sm rounded-0" name="title"
@@ -122,6 +150,7 @@ $msg = isset($_GET['msg']) ? $_GET['msg'] : '';
                     </div>
                 </div>
             </div>
+           
         </div>
     </div>
     <!-- Event Details Modal -->

@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../build/styles/forms.css" />
     <script src="../js/forms.js" defer></script>
+    <link rel="stylesheet" href="../build/styles/nav.css" />
+    <script src="../js/app.js"defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Formulaire d'inscription</title>
   </head>
   <body>
+  <header class="w-full text-gray-700 bg-white sticky z-50 top-0 drop-shadow-md">
+     <?php include("nav.php")?>
+   </header>
     <form action="../controller/maisonController.php" method="POST" class="form">
 
       <input type="hidden" name="addMaison">
@@ -158,8 +164,6 @@
         </div>
       </div>
     </form>
-    <footer class="house">
-    <img src="../assets/images/house_footer-cropped.svg" alt="">
-</footer>
+    <?php require('footer.php'); ?>
   </body>
 </html>

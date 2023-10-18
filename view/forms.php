@@ -18,7 +18,11 @@
     <form action="../controller/maisonController.php" method="POST" class="form">
 
       <input type="hidden" name="addMaison">
-      <h1 class="text-center">Formulaire d'inscription</h1>
+      <div class="container-title z-40">
+    <h1 class="page-title">Formulaire d'inscription</h1>
+    <div class="trait"></div>
+  </div>
+      <!-- <h1 class="text-center">Formulaire d'inscription</h1> -->
       <!-- Progress bar -->
       <div class="progressbar">
         <div class="progress" id="progress"></div>
@@ -36,34 +40,34 @@
           <div class="display">
             <div class="display-input">
           <div class="input-group">
-            <label for="house-area">Surface de la maison</label>
-            <input type="number" name="house-area" id="house-area" />
+            <label for="house-area">Surface</label>
+            <input type="number" name="house-area" id="house-area" placeholder="Surface de la maison"/>
           </div>
           <div class="input-group">
             <label for="room">Pièces</label>
-            <input type="number" name="room" id="room" />
+            <input type="number" name="room" id="room" placeholder="Nombre de pièces"/>
           </div>
           
 
           <div class="input-group">
-            <label for="bedroom">Nombre de Chambres</label>
-            <input type="number" name="bedroom" id="bedroom" default="0" />
+            <label for="bedroom">Chambres</label>
+            <input type="number" name="bedroom" id="bedroom" default="0" placeholder="Nombre de chambres"/>
           </div>
           <div class="input-group">
             <label for="adresse">Adresse</label>
-            <input type="text" name="adresse" id="adresse" />
+            <input type="text" name="adresse" id="adresse" placeholder="Adresse"/>
           </div>
           <div class="input-group">
             <label for="code_postal">Code postal</label>
-            <input type="text" name="code_postal" id="code_postal" />
+            <input type="text" name="code_postal" id="code_postal" placeholder="Code Postal"/>
           </div>
           <div class="input-group">
             <label for="ville">Ville</label>
-            <input type="text" name="ville" id="ville" />
+            <input type="text" name="ville" id="ville" placeholder="Ville" />
           </div>
           <div class="input-group">
             <label for="description">Description</label>
-            <textarea name="description" id="description" cols="65" rows="10"></textarea>
+            <textarea name="description" id="description" cols="65" rows="10" placeholder="Description"></textarea>
           </div>
 
         </div>
@@ -81,12 +85,10 @@
       </div>
       <div class="container-checkbox">
 <div class="container">
-            
             <select name="isCuisineEquipee" id="">
               <option value="oui">Oui</option>
               <option value="non">Non</option>
             </select>
-            
             <span>Cuisine équipée</span>
 </div>
 <div class="container">
@@ -94,11 +96,9 @@
               <option value="oui">Oui</option>
               <option value="non">Non</option>
             </select>
-            
             <span>Jardin</span>
 </div>
 <div class="container">
-            
             <select name="isClim" id="">
               <option value="oui">Oui</option>
               <option value="non">Non</option>
@@ -106,7 +106,6 @@
             <span>Climatisation</span>
 </div>
 <div class="container">
-            
             <select name="isMeuble" id="">
               <option value="oui">Oui</option>
               <option value="non">Non</option>
@@ -114,7 +113,6 @@
             <span>Chambre meublée</span>
 </div>
 <div class="container">
-           
             <select name="isBainPartage" id="">
               <option value="oui">Oui</option>
               <option value="non">Non</option>

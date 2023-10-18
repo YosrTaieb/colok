@@ -22,7 +22,7 @@
         addMaison($adresse,$ville,$code_postal,$house_area,$nb_chambre,$description,$room,$isadmin,$isCuisineEquipee,$jardin,$isMeuble,$isClim,$isBainPartage);
 
         $message = "maison ajouter avec succées";
-        header("Location: ../view/home-ch.php?msg=$message");
+        header("Location: ../view/home.php?msg=$message");
     }
     
 

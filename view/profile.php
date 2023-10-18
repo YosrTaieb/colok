@@ -14,6 +14,8 @@
     <script src="../js/app.js"defer></script>
     <!-- <script src="../js/forms.js" defer></script> -->
     <link rel="stylesheet" href="../build/styles/nav.css" />
+    <link rel="stylesheet" href="../build/styles/footer.css" />
+
     <title>Profil utilisateur</title>
     
   </head>
@@ -103,8 +105,7 @@
     <!-- <div class="house">
       <img src="../assets/images/house_footer.svg" alt="">
   </div> -->
-  <footer></footer>
-  
+
 
     </script>
 

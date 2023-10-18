@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if ($stmt->execute([$nom, $prenom, $date_naissance, $email, $mdp, $role, $allergies, $photo_profil, $maison_id])) {
                 $message = "Utilisateur ajouté avec succès";
-                header("Location: ../view/home-ch.php?msg=$message");
+                header("Location: ../view/home.php?msg=$message");
                 exit;
             } else {
                 echo "Échec de l'ajout de l'utilisateur";

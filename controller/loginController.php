@@ -38,7 +38,7 @@ if(isset($_POST['email'])){
 
 
 
-        header('location:../index.php');
+        header('location:../view/home-connecte.php');
 
     } else {
 

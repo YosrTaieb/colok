@@ -18,7 +18,7 @@
                 addUtilisateur($nom,$prenom,$date_naissance,$email,$mdp);
                 $message = "merci pour votre inscription";
             // Rediriger vers la liste des contacts
-            header("Location: ../view/home-ch.php?msg=$message");
+            header("Location: ../view/home.php?msg=$message");
             exit;
         }
     }

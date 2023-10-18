@@ -68,7 +68,7 @@
 <header class="sticky top-0 z-50 bg-white drop-shadow-md">
     <nav>
       <ul>
-        <li><a href="home-ch.php"></a></li>
+        <li><a href="home.php"></a></li>
         <li>
           <a href="index.html">
             <img src="../assets/images/logo-colok.svg" alt="logo du site pour aller à l'accueil" class="w-32 m-auto h-20">

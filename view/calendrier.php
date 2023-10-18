@@ -44,6 +44,7 @@ if ($maison_id !== null) {
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 
+    <link rel="stylesheet" href="../build/styles/navCalendar.css" />
  
 
 
@@ -91,6 +92,9 @@ if ($maison_id !== null) {
 </head>
 
 <body class="bg-light">
+<header>
+     <?php include("navCalendar.php")?>
+   </header>
 
     <div style="display: none; background-color: #A7F46A;" id="msg"><h1><?php if (!empty($msg)) { echo $msg; } ?></h1></div>
     <div class="container py-5" id="page-container">

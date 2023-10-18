@@ -77,6 +77,7 @@
 
             <div class="container-titre">
                 <h2>Boîte à idées</h2>
+                <h2>Boîte à idées</h2>
                 <div class="trait w-52"></div>
             </div>
             <form action="../controller/ideeController.php" method="POST" class="w-72 mx-auto md:w-1/3">
@@ -104,7 +105,6 @@
 
 </div>
         </div>
-
     </main>
 
     <?php require('footer.php'); ?>

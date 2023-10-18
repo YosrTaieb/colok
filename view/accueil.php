@@ -33,7 +33,9 @@ if(isset($_SESSION['nom'])){
 
 ?>
 
-
+<?php
+    require('footer.php');
+?>
 
 
 

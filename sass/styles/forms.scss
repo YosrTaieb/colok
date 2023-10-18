@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Hubballi&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-
-:root {
-  --primary-color: #c9a1ff;
-}
+@import "variables";
 
 *,
 *::before,
@@ -21,6 +18,7 @@ body {
 /* Global Stylings */
 label {
   display: block;
+  margin-left: 0.5rem;
   margin-bottom: 0.5rem;
   span {
     color: red;
@@ -36,8 +34,40 @@ label {
 }
 
 .text-center {
+  font-size: 2.25rem;
   text-align: center;
 }
+
+////////////////////////////////////////////////
+
+.container-title {
+  position: relative;
+  padding: 2rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.page-title {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 2.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.trait {
+  width: 25rem;
+  position: absolute;
+  z-index: -20;
+  height: 1.25rem;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(142 202 230 / var(--tw-bg-opacity));
+}
+
+////////////////////////////////////////////////
 
 /* Progressbar */
 .progressbar {
@@ -60,7 +90,7 @@ label {
   }
 
   .progress {
-    background-color: var(--primary-color);
+    background-color: $blue;
     width: 0%;
     transition: 0.3s;
   }
@@ -88,8 +118,8 @@ label {
     }
 
     &-active {
-      background-color: var(--primary-color);
-      color: #444;
+      background-color: $blue;
+      color: #fff;
     }
   }
 }
@@ -124,9 +154,11 @@ label {
 .form {
   width: 65%;
   margin: 0 auto;
-  border: 1px solid var(--primary-color);
+  // border: 1px solid $blue;
+  box-shadow: 10px 10px 30px 1px #8ecae6;
   border-radius: 2rem;
   padding: 1.5rem;
+  margin: 100px 0;
 
   &-step {
     display: none;
@@ -138,10 +170,11 @@ label {
     }
   }
 
-  // .display {
-  //   display: flex;
-  //   flex-wrap: wrap;
-  // }
+  .display {
+    margin-top: 100px;
+    // display: flex;
+    // flex-wrap: wrap;
+  }
 
   // .display-input {
   //   width: 50%;
@@ -185,6 +218,10 @@ label {
       flex-direction: column;
       align-items: center;
       margin-bottom: 20px;
+      padding: 40px;
+      p {
+        margin-bottom: 30px;
+      }
     }
   }
 
@@ -203,6 +240,18 @@ label {
       padding: 0.75rem;
       border: 1px solid #7d7d7d;
       border-radius: 55px;
+      background: transparent;
+      &:focus {
+        background-color: #fff;
+        border: 1px solid #7d7d7d;
+      }
+    }
+    textarea {
+      display: block;
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #7d7d7d;
+      border-radius: 15px;
       background: transparent;
       &:focus {
         background-color: #fff;
@@ -239,18 +288,19 @@ label {
 }
 
 .btn {
+  color: white !important;
   padding: 0.75rem;
   display: block;
   text-decoration: none;
-  background-color: var(--primary-color);
+  background-color: $blue;
   color: #444;
   text-align: center;
-  border-radius: 8rem;
+  border-radius: 9999px;
   cursor: pointer;
   transition: 0.3s;
 
   &:hover {
-    box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3px $blue;
   }
 }
 
@@ -261,6 +311,8 @@ input[type="submit"] {
 .rules {
   &-title {
     text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
   }
 }
 
@@ -271,11 +323,19 @@ input[type="submit"] {
   display: flex;
   align-items: center;
   // flex-direction: row-reverse;
+  // justify-content: center;
 
   &-checkbox {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    padding: 30px;
+    gap: 20px;
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid #7d7d7d;
+    margin-bottom: 25px;
+    border-radius: 15px;
   }
 }
 .container span {

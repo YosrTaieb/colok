@@ -16,9 +16,8 @@
     <title>Profil utilisateur</title>
   </head>
   <body>
-   <header class="w-full text-gray-700 bg-white sticky z-50 top-0 drop-shadow-md">
-     <?php include("nav.php")?>
-   </header>
+
+  <?php include("nav.php")?>
 
     <div class="container-title z-40">
     <h1 class="page-title">Mon profil</h1>
@@ -83,9 +82,6 @@
 </div>
     </form>
     </div>
-    <!-- <div class="house">
-      <img src="../assets/images/house_footer.svg" alt="">
-  </div> -->
-  <footer></footer>
+    <?php require('footer.php'); ?>
   </body>
 </html>

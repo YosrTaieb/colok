@@ -12,7 +12,7 @@
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="../js/app.js"defer></script>
-    <!-- <script src="../js/forms.js" defer></script> -->
+    <!-- <scrip src="../js/forms.js" defer></script> -->
     <link rel="stylesheet" href="../build/styles/nav.css" />
     <link rel="stylesheet" href="../build/styles/footer.css" />
 
@@ -101,13 +101,7 @@
         </div>
     </div>
 </form>
-
-    <!-- <div class="house">
-      <img src="../assets/images/house_footer.svg" alt="">
-  </div> -->
-
-
-    </script>
-
+</div>
+<?php require('footer.php'); ?>
   </body>
 </html>

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../build/styles/forms.css" />
     <script src="../js/forms.js" defer></script>
     <link rel="stylesheet" href="../build/styles/nav.css" />
+    <link rel="stylesheet" href="../build/styles/footer.css" />
     <script src="../js/app.js"defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Formulaire d'inscription</title>

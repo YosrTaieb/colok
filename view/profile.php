@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -83,6 +83,9 @@
 </div>
     </form>
     </div>
-    <?php require('footer.php'); ?>
+    <!-- <div class="house">
+      <img src="../assets/images/house_footer.svg" alt="">
+  </div> -->
+  <footer></footer>
   </body>
 </html>

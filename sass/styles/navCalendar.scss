@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Hubballi&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import "variables";
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: white;
+  height: 80px;
+  width: 100%;
+  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07))
+    drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+}
+
+label.logo {
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+
+nav ul {
+  // float: right;
+  display: flex;
+  justify-content: space-around;
+  // margin-right: 20px;
+  gap: 50px;
+}
+
+nav ul li {
+  display: block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: black;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+a:hover {
+  width: 100%;
+  color: #8cb369; /* Couleur du texte au survol  */
+}
+
+.nav-img {
+  
+  img {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: black;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 952px) {
+  .label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+
+  nav{
+    justify-content: right;
+  }
+
+  .nav-img{
+    display: none;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover, a.active {
+    background: none;
+    color: #0082e6;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+}

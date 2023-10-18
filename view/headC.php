@@ -3,6 +3,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../build/styles/home.css">
     <link rel="stylesheet" type="text/css" href="../build/styles/carrousel.css">
+    <link rel="stylesheet" type="text/css" href="../build/styles/nav.css">
+
     <link rel="stylesheet" href="../build/styles/footer.css">
 
     <script src="../js/carrousel.js" defer></script>

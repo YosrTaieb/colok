@@ -37,7 +37,6 @@
                 body{
                   @apply text-gray-500;
                 }
-
             }
 
             @layer components {
@@ -49,9 +48,7 @@
                 }
                 .trait{
                     @apply rounded-full bg-[#DABFFF] h-5 z-20 absolute;
-                }
-
-                    
+                }                    
         }
           </style>
 
@@ -60,10 +57,7 @@
 <body>
 <?php require('nav.php'); ?>
 
-
-
     <main>
-
         <div class="fenetre relative">
 
             <a href="#"><img src="../assets/images/fleche-back.svg" alt="flèche de retour" class="w-10 md:ml-24"></a>
@@ -72,8 +66,6 @@
                 <h2>Boîte  à  idées</h2>
                 <div class="trait w-52"></div>
             </div> 
-
-
 
             <form action="" class="w-72 mx-auto md:w-1/3	">
 
@@ -86,17 +78,11 @@
                 
                     <button class="button h-8 w-24 rounded-full text-white self-end">Proposer</button>
                 </div>
-
             </form>
-            
         </div>
-
     </main>
 
     <?php require('footer.php'); ?>
-
-
-
 
     <!-- lien js vers autre composants https://tailwind-elements.com/docs/standard/getting-started/quick-start/ -->
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>

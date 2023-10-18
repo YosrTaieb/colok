@@ -30,6 +30,10 @@
                 h3{
                    @apply text-3xl text-center mb-6;
                 }
+                button  {
+                    @apply text-[#001e25] rounded-full h-8 w-36 font-medium z-10  bg-[#8ECAE6] hover:bg-[#001e25] hover:text-white;
+                }
+
 
                 footer{
                   @apply h-[2vh];
@@ -41,13 +45,13 @@
 
             @layer components {
                 .fenetre{
-                    @apply h-[85.5vh] text-center pt-2 ;
+                    @apply  text-center pt-2 h-[100.5vh] md:h-[85.5vh];
                 }
                 .container-titre{
                     @apply  relative flex flex-col items-center justify-around mb-12;
                 }
                 .trait{
-                    @apply rounded-full bg-[#DABFFF] h-5 z-20 absolute;
+                    @apply rounded-full bg-[#8ECAE6] h-5 z-20 absolute;
                 }                    
         }
           </style>
@@ -63,22 +67,26 @@
             <a href="#"><img src="../assets/images/fleche-back.svg" alt="flèche de retour" class="w-10 md:ml-24"></a>
 
             <div class="container-titre">
-                <h2>Boîte  à  idées</h2>
+                <h2>Boîte à idées</h2>
                 <div class="trait w-52"></div>
             </div> 
 
-            <form action="" class="w-72 mx-auto md:w-1/3	">
+            <div class="flex flex-col md:flex-row mx-auto w-4/5">
+                <img src="../assets/images/illust-idees.gif" alt="image illustrant une idée">
+                <form action="../controller/ideeController.php" method="POST" class="w-72 m-auto md:w-2/5">
 
-                <div class="flex flex-col w-full">
-                    <label class="label">Titre de l'idée</label> 
-                    <input type="text" placeholder="Nom de mon idée" class="input input-bordered mb-3" />
-                
-                    <label class="label">Description de l'idée</label>
-                    <textarea placeholder="Je vous propose" class="textarea textarea-bordered textarea-lg mb-8" ></textarea>
-                
-                    <button class="button h-8 w-24 rounded-full text-white self-end">Proposer</button>
-                </div>
-            </form>
+                    <div class="flex flex-col w-full">
+                        <label for="titre" class="label"> <span class="ml-2">   <i class="fa fa-lightbulb mr-2"></i>Titre de l'idée</span></label> 
+                        <input type="text" placeholder="Nom de mon idée" class="input input-bordered mb-3" />
+                    
+                        <label for="description" class="label"> <span class="ml-2"> <i class="fa fa-comment mr-2"></i>Description de l'idée</span></label>
+                        <textarea placeholder="Je vous propose" id="description" name="description" class="textarea textarea-bordered textarea-lg mb-8" ></textarea>
+                    
+                        <button class="self-end"><i class="fa fa-paper-plane"></i><span class="ml-2">Proposer</span></button>
+                    </div>
+                </form>
+            </div>
+            
         </div>
     </main>
 

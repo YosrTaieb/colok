@@ -56,7 +56,7 @@
 <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 nav-link" href="profile-user.php">
     <i class="fas fa-user"></i> Mon Profil
 </a>
-<a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 nav-link" href="../view/deconnexion.php">
+<a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 nav-link" href="../view/home.php">
     <i class="fas fa-power-off"></i> Déconnexion
 </a>
 

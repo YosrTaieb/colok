@@ -58,15 +58,20 @@ footer .copyright a {
 @media (max-width: 768px) {
   footer {
     background-position: center top 0rem;
+    height: 100% !important;
   }
   footer .content-footer {
     padding: 0rem 1rem;
+    margin: -2rem auto 0rem auto;
   }
   footer .content-footer .titre-footer {
     margin: 2rem;
   }
   footer .content-footer p {
     font-size: 1.2rem;
+  }
+  footer .footer-content {
+    margin-top: 7rem;
   }
 }
 

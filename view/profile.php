@@ -21,9 +21,8 @@
   </head>
   
   <body>
-   <header class="w-full text-gray-700 bg-white sticky z-50 top-0 drop-shadow-md">
-     <?php include("nav.php")?>
-   </header>
+
+  <?php include("nav.php")?>
 
     <div class="container-title z-40">
     <h1 class="page-title">Mon profil</h1>
@@ -100,8 +99,12 @@
             </div>
         </div>
     </div>
+<<<<<<< HEAD
 </form>
 </div>
 <?php require('footer.php'); ?>
+=======
+    <?php require('footer.php'); ?>
+>>>>>>> b8cd1a8 (update header)
   </body>
 </html>

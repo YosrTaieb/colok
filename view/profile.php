@@ -99,12 +99,7 @@
             </div>
         </div>
     </div>
-<<<<<<< HEAD
-</form>
 </div>
-<?php require('footer.php'); ?>
-=======
     <?php require('footer.php'); ?>
->>>>>>> b8cd1a8 (update header)
   </body>
 </html>

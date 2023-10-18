@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,7 +15,9 @@
     <!-- <script src="../js/forms.js" defer></script> -->
     <link rel="stylesheet" href="../build/styles/nav.css" />
     <title>Profil utilisateur</title>
+    
   </head>
+  
   <body>
    <header class="w-full text-gray-700 bg-white sticky z-50 top-0 drop-shadow-md">
      <?php include("nav.php")?>
@@ -28,64 +31,82 @@
     <a href="#imageFile" onclick="poutpout()" class="profile-link">
         <img src="../assets/images/profile_img.png" id="blah" alt=""> 
         <i id="mon-icon" class="fas fa-camera"></i>
+        
     </a>
 </div> 
 <div class="form-wrapper">
 <div class="form-illustration">
   <img src="../assets/images/illust-profil.gif" alt="">
 </div>
+<form action="../controller/profileControlleur.php" method="post" class="form" enctype="multipart/form-data">
+    <h2 class="form-title">Information personnelle</h2>
 
-<form action="POST" class="form">
-<input type="file" id="imageFile" name="fileToUpload" accept="image/*" style="display: none;">
-                               
-   
-      <h2 class="form-title">Information personnelle</h2>
+    <div class="form-step form-step-active">
+        <div class="display">
+            <div class="display-input">
+                <div class="name-container">
+                    <div class="input-group-name">
+                        <label for="nom"><i class="fas fa-user"></i>Nom<span>*</span></label>
+                        <input type="text" name="nom" value="<?php echo $_SESSION['nom'] ?>" id="nom" required placeholder="Votre nom" />
+                    </div>
+                    <div class="input-group-name">
+                        <label for="prenom"><i class="fas fa-user"></i>Prénom<span>*</span></label>
+                        <input type="text" name="prenom" id="prenom" value="<?php echo $_SESSION['prenom'] ?>" required placeholder="Votre prénom" />
+                    </div>
+                </div>
 
-      <div class="form-step form-step-active">
-  <div class="display">
-    <div class="display-input">
-      <div class="name-container">
-        <div class="input-group-name">
-          <label for="lastname"><i class="fas fa-user"></i>Nom<span>*</span></label>
-          <input type="text" name="lastname" id="lastname" required placeholder="Votre nom"/>
-        </div>
-        <div class="input-group-name">
-          <label for="firstname"><i class="fas fa-user"></i>Prénom<span>*</span></label>
-          <input type="text" name="firstname" id="firstname" required placeholder="Votre prénom"/>
-        </div>
-      </div>
+                <div class="input-group">
+                    <label for="date_naissance"><i class="fas fa-calendar"></i>Date de naissance<span>*</span></label>
+                    <input type="date" name="date_naissance" value="<?php echo $_SESSION['date_naissance'] ?>" id="date_naissance" required placeholder="Votre date de naissance" />
+                </div>
 
-      <div class="input-group">
-        <label for="email"><i class="fas fa-envelope"></i>Adresse mail<span>*</span></label>
-        <input type="email" name="email" id="email" required placeholder="Votre adresse e-mail"/>
-      </div>
-      <div class="input-group">
-        <label for="job"><i class="fas fa-briefcase"></i>Profession</label>
-        <input type="text" name="job" id="job" placeholder="Votre profession"/>
-      </div>
-      <div class="input-group">
-        <label for="schedule"><i class="far fa-clock"></i>Horaire<span>*</span></label>
-        <input type="text" name="schedule" id="schedule" required placeholder="Votre horaire"/>
-      </div>
-      <div class="input-group">
-        <label for="allergy"><i class="fas fa-allergies"></i>Allergies</label>
-        <input type="text" name="allergy" id="allergy" placeholder="Vos allergies"/>
-      </div>
-      <div class="input-group">
-        <label for="event"><i class="far fa-calendar-alt"></i>Évènements à venir</label>
-        <input type="text" name="event" id="event" placeholder="Vos évènements à venir"/>
-      </div>
-      <div class="btn-center">
-      <button class="form-btn">Valider</button>
-    </div>
-    </div>
-  </div>
+                <div class="input-group">
+                    <label for="email"><i class="fas fa-envelope"></i>Adresse mail<span>*</span></label>
+                    <input type="email" name="email" id="email" value="<?php echo $_SESSION['email'] ?>"  required placeholder="Votre adresse e-mail" />
+                </div>
+
+                <div class="input-group">
+                    <label for="mdp"><i class="fas fa-lock"></i>Mot de passe<span>*</span></label>
+                    <input type="password" name="mdp" id="mdp" required placeholder="Votre mot de passe" />
+                </div>
+
+                <div class="input-group">
+                    <label for="role"><i class="fas fa-user-tag"></i>Rôle</label>
+                    <input type="text" name="role" value="<?php echo $_SESSION['role'] ?>" id="role" placeholder="Votre rôle" />
+                </div>
+
+                <div class="input-group">
+                    <label for="allergies"><i class="fas fa-allergies"></i>Allergies</label>
+                    <input type="text" name="allergies"  value="<?php echo $_SESSION['allergies'] ?>" id="allergies" placeholder="Vos allergies" />
+                </div>
+
+                <div class="input-group">
+             
+                <input type="file" id="imageFile" name="fileToUpload" accept="image/*" style="display: none;">
+                </div>
+
+            
+                <div class="input-group">
+    <label for="maison_id"><i class="fas fa-home"></i>ID de la maison</label>
+    <input type="text" name="maison_id" id="maison_id" required placeholder="ID de votre maison" />
 </div>
-    </form>
+
+
+                <div class="btn-center">
+                    <button class="form-btn" type="submit" name="addProfile">Valider</button>
+                </div>
+            </div>
+        </div>
     </div>
+</form>
+
     <!-- <div class="house">
       <img src="../assets/images/house_footer.svg" alt="">
   </div> -->
   <footer></footer>
+  
+
+    </script>
+
   </body>
 </html>

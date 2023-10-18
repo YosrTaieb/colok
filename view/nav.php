@@ -21,7 +21,7 @@
                 </div>
 
                 <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-around md:flex-row items-center md:mx-auto">
-                    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent text-gray-900 rounded-lg md:mt-0 nav-link" href="#">
+                    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent text-gray-900 rounded-lg md:mt-0 nav-link" href="../view/form-idees.php">
                         <i class="fas fa-lightbulb"></i> Boîte à idées
                     </a>
                     <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 nav-link" href="../view/calendrier.php">
@@ -53,7 +53,7 @@
     <i class="fas fa-home"></i> Profil Maison
 </a>
 
-<a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 nav-link" href="profile-user.php">
+<a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 nav-link" href="profile.php">
     <i class="fas fa-user"></i> Mon Profil
 </a>
 <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 nav-link" href="../view/deconnexion.php">

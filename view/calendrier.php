@@ -28,8 +28,8 @@ if ($maison_id !== null) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scheduling</title>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+ 
+    
     <link rel="stylesheet" href="../schedule/schedule/css/bootstrap.min.css">
     <link rel="stylesheet" href="../schedule/schedule/fullcalendar/lib/main.min.css">
     <script src="../schedule/schedule/fullcalendar/js/jquery-3.6.0.min.js"></script>
@@ -37,9 +37,16 @@ if ($maison_id !== null) {
     <script src="../js/bootstrap.min.js"></script>
     <script src="../schedule/schedule/fullcalendar/lib/locales/fr.js"></script>
     <script src="../schedule/schedule/fullcalendar/js/script.js"></script>
-   
+    <script src="../js/app.js"defer></script>
+    <!-- <script src="../js/forms.js" defer></script> -->
+    <link rel="stylesheet" href="../build/styles/nav.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 
-    
+ 
+
+
     
 
     <style>
@@ -84,6 +91,7 @@ if ($maison_id !== null) {
 </head>
 
 <body class="bg-light">
+
     <div style="display: none; background-color: #A7F46A;" id="msg"><h1><?php if (!empty($msg)) { echo $msg; } ?></h1></div>
     <div class="container py-5" id="page-container">
         <div class="row">
@@ -211,5 +219,5 @@ if ($maison_id !== null) {
 <script src="../schedule/schedule/fullcalendar/js/script.js">
     
 </script>
-
+<?php include("footer.php")?>
 </html>

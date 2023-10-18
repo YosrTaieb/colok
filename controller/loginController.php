@@ -29,7 +29,10 @@ if(isset($_POST['email'])){
         $_SESSION["nom"] = $data[0]['nom'];
         $_SESSION["prenom"] = $data[0]['prenom'];
         $_SESSION["email"] = $data[0]['email'];
-        $_SESSION["age"] = $data[0]['age'];
+        $_SESSION["date_naissance"] = $data[0]['date_naissance'];
+        $_SESSION["role"] = $data[0]['role'];
+        $_SESSION["photo_profil"] = $data[0]['photo_profil'];
+        $_SESSION["allergies"] = $data[0]['allergies'];
         $_SESSION["maison_id"] = $data[0]['maison_id'];
 
 

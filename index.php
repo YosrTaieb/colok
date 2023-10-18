@@ -3,3 +3,4 @@
     header('location: ../view/accueil.php');
 
 ?>
+

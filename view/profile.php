@@ -168,6 +168,52 @@
     </div>
 
 </div>
+[11:06] Safae Ben Attou
+
+<script>
+
+  // Sélectionnez les éléments du DOM
+
+  const editButton = document.getElementById('editButton');
+
+  const card = document.getElementById('card');
+
+  const form1 = document.querySelector('.form');
+
+ 
+
+  // Ajoutez un gestionnaire d'événement au bouton "Edit"
+
+  editButton.addEventListener('click', () => {
+
+    // Affichez le formulaire en changeant son style "display" en "block"
+
+    form.style.display = 'block';
+
+    card.style.display = 'none'
+
+  });
+
+  // Sélectionnez le bouton de fermeture
+
+  const closeFormButton = document.getElementById('closeFormButton');
+  // Sélectionnez le formulaire
+
+  const form = document.querySelector('.form');
+  // Ajoutez un gestionnaire d'événements pour le clic sur le bouton de fermeture
+
+  closeFormButton.addEventListener('click', (e) => {
+
+    e.preventDefault(); // Empêche le lien de se comporter par défaut (redirection)
+    // Masquez le formulaire en changeant son style "display" en "none"
+
+    form.style.display = 'none';
+
+    card.style.display = 'block';
+
+  });
+
+</script>
 <?php require('footer.php'); ?>
   </body>
 </html>

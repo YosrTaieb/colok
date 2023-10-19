@@ -1,3 +1,8 @@
+<?php session_start();
+    require_once('../model/utilisateur.php');
+    $user = getUser($_SESSION['id']);
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -8,6 +13,7 @@
     <script src="../js/forms.js" defer></script>
     <link rel="stylesheet" href="../build/styles/nav.css" />
     <link rel="stylesheet" href="../build/styles/footer.css" />
+    <link rel="stylesheet" href="../sass/styles/nav.scss" />
     <script src="../js/app.js"defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Formulaire d'inscription</title>
@@ -20,7 +26,7 @@
 
       <input type="hidden" name="addMaison">
       <div class="container-title z-40">
-    <h1 class="page-title">Formulaire d'inscription</h1>
+    <h1 class="page-title">Profil maison</h1>
     <div class="trait"></div>
   </div>
       <!-- <h1 class="text-center">Formulaire d'inscription</h1> -->

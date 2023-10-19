@@ -1,43 +1,84 @@
 <?php
 // Inclure le fichier de connexion à la base de données
 require_once('../model/connexion.php');
+require_once('../model/utilisateur.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $maison_id = (int)$_POST['maison_id']; // Convertir en entier
 
-    if (filter_var($maison_id, FILTER_VALIDATE_INT) !== false && $maison_id > 0) {
-        // La valeur de maison_id est un entier positif, vous pouvez l'insérer dans la base de données
-        // Vérifier si le formulaire a été soumis
-        if (isset($_POST['addProfile'])) {
+
+    
+        if (isset($_POST['submit'])) {
             // Récupérer les données du formulaire
+            $id = $_POST['id'];
             $nom = $_POST['nom'];
             $prenom = $_POST['prenom'];
             $date_naissance = $_POST['date_naissance'];
             $email = $_POST['email'];
             $mdp = password_hash($_POST['mdp'], PASSWORD_DEFAULT); // Hasher le mot de passe
-            $role = $_POST['role'];
             $allergies = $_POST['allergies'];
-            $photo_profil = $_FILES['photo_profil']['name'];
-            $maison_id = $_POST['maison_id'];
 
-            // Insérer les données dans la base de données
-            $conn = connexion();
-
-            $sql = "INSERT INTO utilisateur (nom, prenom, date_naissance, email, mdp, role, allergies, photo_profil, maison_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-
-            $stmt = $conn->prepare($sql);
-
-            if ($stmt->execute([$nom, $prenom, $date_naissance, $email, $mdp, $role, $allergies, $photo_profil, $maison_id])) {
-                $message = "Utilisateur ajouté avec succès";
-                header("Location: ../view/home.php?msg=$message");
-                exit;
-            } else {
-                echo "Échec de l'ajout de l'utilisateur";
+            if($_FILES['fileToUpload']['name'] != ""){
+                $photo_profil = $_FILES['fileToUpload']['name'];
+                if($photo_profil != ""){
+                    $target_dir = "../images/";
+                    $target_file = $target_dir . basename($_FILES['fileToUpload']['name']);
+                    $uploadOk = 1;
+                    $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+    
+                    // Check if image file is a actual image or fake image
+                    if(isset($_POST["submit"])) {
+                    $check = getimagesize($_FILES['fileToUpload']["tmp_name"]);
+                    if($check !== false) {
+                        echo "File is an image - " . $check["mime"] . ".";
+                        $uploadOk = 1;
+                    } else {
+                        echo "File is not an image.";
+                        $uploadOk = 0;6;
+                    }
+                    }
+    
+                   
+                    // Check file size
+                    if ($_FILES['fileToUpload']["size"] > 5000000) {
+                    echo "Sorry, your file is too large.";
+                    $uploadOk = 0;
+                    }
+    
+                    // Allow certain file formats
+                    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+                    && $imageFileType != "gif" ) {
+                    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+                    $uploadOk = 0;
+                    }
+    
+                    // Check if $uploadOk is set to 0 by an error
+                    if ($uploadOk == 0) {
+                    echo "Sorry, your file was not uploaded.";
+                    // if everything is ok, try to upload file
+                    } else {
+                    if (move_uploaded_file($_FILES['fileToUpload']["tmp_name"], $target_file)) {
+                        echo "The file ". htmlspecialchars( basename( $_FILES['fileToUpload']["name"])). " has been uploaded.";
+                    } else {
+                        echo "Sorry, there was an error uploading your file.";
+                    }
+                    }
+                }
             }
+
+            else{
+                $photo_profil = $_POST['photo'];
+                
+            }
+            
+
+
+           
+           
+            
+            updateUser($id,$nom,$prenom,$date_naissance,$photo_profil,$allergies,$email,$mdp);
+
+            header("Location: ../view/profile.php");
         }
-    } else {
-        // Gérez l'erreur, par exemple en affichant un message à l'utilisateur
-        echo "L'ID de la maison doit être un nombre entier positif.";
-    }
-}
+        }
+    
 ?>

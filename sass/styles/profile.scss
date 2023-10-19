@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Hubballi&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import "variables";
 
+
 :root {
   --primary-color: #c9a1ff;
 }
@@ -213,18 +214,18 @@ label {
     display: flex;
     flex-direction: column-reverse;
   }
-  .form-illustration {
-    width: 100%;
-    padding: 100px 0;
-    img{
-      margin-right: 0;
+  // .form-illustration {
+  //   width: 100%;
+  //   padding: 100px 0;
+  //   img{
+  //     margin-right: 0;
 
-    }
+  //   }
   }
   .form {
     width: 100%;
   }
-}
+
 
 /* Footer */
 

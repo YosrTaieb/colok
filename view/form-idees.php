@@ -1,5 +1,10 @@
 
 
+<?php session_start();
+require_once('../model/utilisateur.php');
+$user = getUser($_SESSION['id']);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="../sass/styles/nav.scss">
@@ -64,13 +69,14 @@
 </head>
 
 <body>
-    
-    <?php require('nav.php'); ?>
+<header class="w-full text-gray-700 bg-white sticky z-50 top-0 drop-shadow-md">
+     <?php include("nav.php")?>
+   </header>
 
     <main>
 
 
-    
+        
         <div class="fenetre relative">
 
             

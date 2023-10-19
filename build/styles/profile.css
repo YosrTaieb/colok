@@ -192,17 +192,11 @@ label span {
     display: flex;
     flex-direction: column-reverse;
   }
-  .form-illustration {
-    width: 100%;
-    padding: 100px 0;
-  }
-  .form-illustration img {
-    margin-right: 0;
-  }
-  .form {
-    width: 100%;
-  }
 }
+.form {
+  width: 100%;
+}
+
 /* Footer */
 footer {
   position: relative;

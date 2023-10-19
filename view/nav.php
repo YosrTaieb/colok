@@ -30,18 +30,17 @@
                     <a class="h-0 invisible md:visible w-32 flex items-center" href="home-connecte.php">
                     <img src="../assets/images/logo-colok.svg"  alt="logo du site pour aller à l'accueil" class="w-24 m-auto h-24 sm:w-auto sm:m-0 sm:h-auto">
                     </a>
-                    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 nav-link" href="signIn.php">
-                        <i class="fas fa-sign-in-alt"></i> Inscription
+                    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 nav-link" href="mesTaches.php">
+                    <i class="fas fa-tasks"></i> Mes Tâches
                     </a>
-                    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 nav-link" href="signIn.php">
-                    <i class="fas fa-key"></i> Connexion
-
-                    </a>
+                    <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 nav-link" href="../view/forms.php">
+    <i class="fas fa-home"></i> Profil Maison
+</a>
                     <div @click.away="open = false" class="relative" x-data="{ open: false }">
                         <button @click="open = !open"
                             class="flex flex-row items-center w-18 px-2 pb-2 pt-0 mt-0 text-sm font-semibold mr-[35px] ml-[35px] text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 ">
-                            <img src="../assets/images/profil-nav.svg" id="blah2"  alt="" class="w-[62px] mt-2  rounded-full h-[4rem] max-w-full mx-auto  ">
-
+                            <img src="../images/<?php echo $user['photo_profil']; ?>" id="blah2"  alt="" class="w-[62px] mt-2  rounded-full h-[4rem] max-w-full mx-auto  ">
+                           
 
                         </button>
                         <div x-show="open" x-transition:enter="transition ease-out duration-100"
@@ -49,12 +48,10 @@
                             x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100"
                             x-transition:leave-end="transform opacity-0 scale-95" class="absolute z-50 right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-40">
                             <div class="px-2 py-2 bg-white rounded-md shadow">
-                            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 nav-link" href="#">
-    <i class="fas fa-home"></i> Profil Maison
-</a>
+                            
 
 <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 nav-link" href="profile.php">
-    <i class="fas fa-user"></i> Mon Profil
+    <i class="fas fa-user"></i> Mon Profil 
 </a>
 <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 nav-link" href="../view/home.php">
     <i class="fas fa-power-off"></i> Déconnexion

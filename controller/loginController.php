@@ -29,6 +29,7 @@ if(isset($_POST['email'])){
         $_SESSION["nom"] = $data[0]['nom'];
         $_SESSION["prenom"] = $data[0]['prenom'];
         $_SESSION["email"] = $data[0]['email'];
+        $_SESSION["mdp"] = $data[0]['mdp'];
         $_SESSION["date_naissance"] = $data[0]['date_naissance'];
         $_SESSION["role"] = $data[0]['role'];
         $_SESSION["photo_profil"] = $data[0]['photo_profil'];
@@ -36,9 +37,9 @@ if(isset($_POST['email'])){
         $_SESSION["maison_id"] = $data[0]['maison_id'];
 
 
-
-
-        header('location:../view/home-connecte.php');
+        $message = "merci pour votre inscription";
+        header("Location: ../view/home-connecte.php?msg=$message");
+ 
 
     } else {
 

@@ -42,5 +42,28 @@
         return $data;
     }
 
+    function getUser($id){
+        $conn = connexion();
+
+        // Requête pour obtenir les tâches liées à l'utilisateur actuel
+        $sql = "SELECT * FROM utilisateur where id = :id ";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+
+        $data = $stmt->fetch();
+        return $data;
+    }
+
+
+    function updateUser($id,$nom,$prenom,$date_naissance,$photo,$allergies,$email,$mdp){
+        $conn = connexion();
+        $sql = "UPDATE utilisateur SET nom = ? , prenom = ? ,date_naissance= ? , photo_profil = ? , allergies = ? , email= ? , mdp = ? WHERE id = ?";
+        $stmt= $conn->prepare($sql);
+        $stmt->execute([$nom, $prenom, $date_naissance, $photo,$allergies,$email,$mdp ,$id]);
+        $conn = null;
+    
+    }
+
 
 ?>

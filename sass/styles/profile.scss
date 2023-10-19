@@ -12,7 +12,7 @@
 }
 
 body {
-  // background-color: #e1f6fd;
+  //background-color: #e1f6fd;
   font-family: "Lato", sans-serif;
   margin: 0;
   display: grid;
@@ -117,7 +117,7 @@ label {
   background-color: white;
   width: 65%;
   margin: 0 auto;
-  box-shadow: 10px 10px 30px 1px #8ECAE6;
+  box-shadow: 10px 10px 30px 1px #8ecae6;
   // border: 2px solid $blue;
   border-radius: 2rem;
   padding: 2rem;
@@ -213,17 +213,16 @@ label {
     display: flex;
     flex-direction: column-reverse;
   }
-  .form-illustration {
-    width: 100%;
-    padding: 100px 0;
-    img{
-      margin-right: 0;
+  // .form-illustration {
+  //   width: 100%;
+  //   padding: 100px 0;
+  //   img{
+  //     margin-right: 0;
 
-    }
-  }
-  .form {
-    width: 100%;
-  }
+  //   }
+}
+.form {
+  width: 65%;
 }
 
 /* Footer */
@@ -234,19 +233,8 @@ footer {
   // height: 20vh;
 }
 
-.house img {
-  // background-image: url("../../assets/images/house_footer.svg");
-  // background-repeat: no-repeat;
-  // background-position: center;
-  position: absolute;
-  width: 100%;
-  opacity: 0.7;
-  top: 0;
-  z-index: -1;
-  margin-top: 2rem;
-}
 .form-btn {
-  background-color: $blue;
+  background-color: $blue !important;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -267,4 +255,145 @@ footer {
 
 footer {
   height: 20%;
+}
+
+// Modal
+
+.close {
+  &-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    i {
+      margin-left: 900px;
+    }
+  }
+}
+
+// TEST 2
+
+.card {
+  &-container {
+    margin: 100px 0;
+  }
+}
+
+.snip1336 {
+  font-family: "Lato", sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 230px;
+  max-width: 400px;
+  width: 100%;
+  color: white;
+  text-align: left;
+  line-height: 1.4em;
+  background-color: #141414;
+  border-radius: 15px;
+}
+.snip1336 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.snip1336 img {
+  width: inherit;
+  max-width: 100%;
+  vertical-align: top;
+  opacity: 0.85;
+}
+.snip1336 figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #1a375d;
+  padding: 25px;
+  position: relative;
+}
+.snip1336 figcaption:before {
+  position: absolute;
+  content: "";
+  bottom: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 55px 0 0 400px;
+  border-color: transparent transparent transparent #1a375d;
+}
+.snip1336 figcaption a {
+  padding: 5px;
+  border: 1px solid #ffffff;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 0.7em;
+  margin: 10px 0;
+  display: inline-block;
+  //opacity: 0.65;
+  width: 47%;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.snip1336 figcaption a:hover {
+  //opacity: 0.65;
+  color: #1a375d;
+  background-color: white;
+}
+.snip1336 .profile {
+  border-radius: 50%;
+  position: absolute;
+  bottom: 100%;
+  left: 25px;
+  z-index: 1;
+  max-width: 90px;
+  opacity: 1;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.profile:hover {
+  transform: translateY(-0.3rem) scale(1.05);
+}
+
+.snip1336 .follow {
+  background-color: #8ecae6;
+  border-radius: 9999px;
+  border-color: white;
+  color: white;
+}
+.snip1336 h2 {
+  margin: 0 0 20px;
+  font-weight: 600;
+}
+.snip1336 h2 span {
+  display: block;
+  font-size: 0.5em;
+  color: #2980b9;
+}
+.snip1336 p {
+  margin: 0 0 10px;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  //opacity: 0.8;
+  i {
+    font-weight: 900;
+    font-size: 1rem;
+  }
+}
+
+// icône oeil mdp
+
+.main-password {
+  position: relative;
+}
+.icon-view {
+  position: absolute;
+  right: 14px;
+  top: 43px;
 }

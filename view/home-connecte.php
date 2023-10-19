@@ -1,4 +1,10 @@
-<?php session_start(); ?>
+
+
+<?php session_start();
+    require_once('../model/utilisateur.php');
+    $user = getUser($_SESSION['id']);
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>

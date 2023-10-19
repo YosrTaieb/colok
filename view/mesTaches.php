@@ -1,6 +1,5 @@
-
 <?php 
-    
+    session_start();
     include('../model/taches.php');
     $taches = listeTache();
 
@@ -12,7 +11,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Table des tâches</title>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -46,6 +47,7 @@
 </style>
 
 <body>
+    
     <table>
         <thead>
             <tr>
@@ -78,14 +80,14 @@
                 </tr>
                   <!-- Event Details Modal -->
                   <div id="myModal<?php echo $tache['id'] ?>" class="modal fade" role="dialog">
-			<div class="modal-dialog">
-			    <div class="modal-content">
-					<div class="modal-header">
-						 <button type="button" class="close" data-dismiss="modal">&times;</button>
-						    <h4 class="modal-title">Details</h4>
-				    </div>
-				    <div class="modal-body">
-						 <form action="">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                         <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Details</h4>
+                    </div>
+                    <div class="modal-body">
+                         <form action="">
                             <h1><?php echo $tache['nom'] ?></h1>
                             <p><?php echo $tache['description'] ?></p>
                             <select name="statut" id="" selected="<?php echo $tache['statut'] ?>">
@@ -96,11 +98,11 @@
                             </select>
 
                          </form>
-						
-				    </div>
-				</div>
-			</div>
-		</div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
     <!-- Event Details Modal -->
             <?php } ?>
         </tbody>
@@ -110,4 +112,3 @@
 
 </body>
 </html>
-

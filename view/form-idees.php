@@ -8,6 +8,8 @@ $user = getUser($_SESSION['id']);
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="../sass/styles/nav.scss">
+<link rel="stylesheet" href="../build/styles/bell.css">
+<script src="../js/bell.js"></script>
 
 
 <head>
@@ -73,6 +75,55 @@ $user = getUser($_SESSION['id']);
 </head>
 
 <body>
+<nav>
+	
+    <div class="icon" onclick="toggleNotifi()">
+        
+    </div>
+    <div class="notifi-box" id="box">
+        <h2>Notifications <span>17</span></h2>
+        <div class="notifi-item">
+            <img src="img/avatar1.png" alt="img">
+            <div class="text">
+               <h4>Elias Abdurrahman</h4>
+               <p>@lorem ipsum dolor sit amet</p>
+            </div> 
+        </div>
+
+        <div class="notifi-item">
+            <img src="img/avatar2.png" alt="img">
+            <div class="text">
+               <h4>John Doe</h4>
+               <p>@lorem ipsum dolor sit amet</p>
+            </div> 
+        </div>
+
+        <div class="notifi-item">
+            <img src="img/avatar3.png" alt="img">
+            <div class="text">
+               <h4>Emad Ali</h4>
+               <p>@lorem ipsum dolor sit amet</p>
+            </div> 
+        </div>
+
+        <div class="notifi-item">
+            <img src="img/avatar4.png" alt="img">
+            <div class="text">
+               <h4>Ekram Abu </h4>
+               <p>@lorem ipsum dolor sit amet</p>
+            </div> 
+        </div>
+
+        <div class="notifi-item">
+            <img src="img/avatar5.png" alt="img">
+            <div class="text">
+               <h4>Jane Doe</h4>
+               <p>@lorem ipsum dolor sit amet</p>
+            </div> 
+        </div>
+
+    </div>
+</nav>
 <header class="w-full text-gray-700 bg-white sticky z-50 top-0 drop-shadow-md">
      <?php include("nav.php")?>
    </header>

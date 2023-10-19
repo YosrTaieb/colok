@@ -2,6 +2,8 @@
 
 <!DOCTYPE html>
 <html lang="en">
+    <script src="../js/bell.js"></script>
+    <link rel="stylesheet" href="../build/styles/bell.css">
 
 <head>
 <?php

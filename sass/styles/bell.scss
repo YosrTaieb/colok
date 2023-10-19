@@ -1,0 +1,114 @@
+$red: #f00;
+$blue: #00A9D4;
+$gray: #eee;
+$lightGray: #999;
+$lighterGray: #ccc;
+$darkGray: #777;
+$lightBlue: #0EBFE9;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+  
+}
+
+
+
+.icon {
+  cursor: pointer;
+  margin-left: 1rem;
+  line-height: 40px;
+
+
+
+  span {
+    background: $red;
+    padding: 2px;
+    border-radius: 50%;
+    color: #fff;
+    vertical-align: top;
+    margin-left: -22px;
+   
+  }
+
+  img {
+    display: inline-block;
+    width: 40px;
+  
+ 
+   
+   
+   
+  
+  }
+  .cloch {
+    position: absolute;
+    top: 0; /* Vous pouvez ajuster la position verticale si nécessaire */
+    right: 0;
+  }
+  
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+
+.notifi-box {
+
+  width: 300px;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  top: 63px;
+  right: 40px;
+  transition: 1s opacity, 250ms height;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  h2 {
+    font-size: 14px;
+    padding: 10px;
+    border-bottom: 1px solid $gray;
+    color: $lightGray;
+
+    span {
+      color: $red;
+      margin-bottom: 50px;
+    }
+  }
+
+  .notifi-item {
+    display: flex;
+    border-bottom: 1px solid $gray;
+    padding: 15px 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $lighterGray;
+    }
+
+    img {
+      display: block;
+      width: 50px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+
+    .text {
+      h4 {
+        color: $darkGray;
+        font-size: 16px;
+        margin-top: 10px;
+      }
+
+      p {
+        color: $lightGray;
+        font-size: 12px;
+      }
+    }
+  }
+}

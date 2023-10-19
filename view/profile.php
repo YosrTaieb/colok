@@ -58,7 +58,7 @@
 
 /* Styles pour l'icône de fermeture */
 .close-button i {
-  margin-left: 900px; /* Espace entre l'icône et le texte */
+  margin-left: 100%; /* Espace entre l'icône et le texte */
 }
 
     </style>

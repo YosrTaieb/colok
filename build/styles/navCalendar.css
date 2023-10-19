@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Hubballi&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 * {
   padding: 0;
@@ -47,11 +48,50 @@ nav ul li a {
   padding: 7px 13px;
   border-radius: 3px;
   text-decoration: none;
+  margin-left: 0.5rem;
+}
+nav ul li a i {
+  margin-right: 0.5rem;
 }
 
 a:hover {
   width: 100%;
   color: #8cb369; /* Couleur du texte au survol  */
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px; /* Épaisseur de la ligne de soulignement */
+  bottom: -2px; /* Décalez légèrement la ligne vers le bas pour cacher le texte */
+  left: 0;
+  background-color: transparent; /* Couleur de l'animation du soulignement (transparent au début) */
+  transition: width 0.3s ease, background-color 0.3s ease; /* Durée de l'animation */
+}
+
+a:hover::before {
+  width: 100%; /* Largeur de l'animation du soulignement au survol */
+  background-color: #8CB369; /* Couleur de l'animation du soulignement (violet) */
+}
+
+@keyframes pulseOnce {
+  0% {
+    transform: scale(1.8);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Styles pour l'effet de soulignement */
+a {
+  position: relative;
+  text-decoration: none;
+  color: #333333; /* Couleur du texte */
+  transition: color 0.3s ease, border-bottom-color 0.3s ease; /* Transition de couleur du texte et de la bordure */
 }
 
 .nav-img img {
@@ -109,10 +149,6 @@ a:hover {
   }
   nav ul li a {
     font-size: 20px;
-  }
-  a:hover, a.active {
-    background: none;
-    color: #0082e6;
   }
   #check:checked ~ ul {
     left: 0;

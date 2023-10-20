@@ -1,4 +1,8 @@
-<?php session_start(); ?>
+<?php session_start(); 
+require_once("../model/utilisateur.php");
+$user = getUser($_SESSION["id"]);
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -6,6 +10,8 @@
     <title>Colok - Accueil</title>
     <?php require('headC.php');?>
     <link rel="stylesheet" href="../build/styles/cards.css">
+
+  
     
 
     <script>
@@ -101,74 +107,81 @@
     <div class="container2 h-auto w-auto flex flex-col justify-evenly items-center  md:flex-row w-1/2 flex-wrap	">
     <!--box-shadow: 0 16px 22px -17px #03153B;-->
 
-      <div class="card">
+     <div class="card">
+    <a href="../view/profile.php">
         <div class="face face1">
-          <div class="content">
-            <div class="icon">
-              <img src="../assets/images/profil.svg" alt="icone du profil" class="icon-didacticiel">
+            <div class="content">
+                <div class="icon">
+                    <img src="../assets/images/profil.svg" alt="icone du profil" class="icon-didacticiel">
+                </div>
             </div>
-          </div>
         </div>
         <div class="face face2">
-              <div class="content">
+            <div class="content">
                 <h3>Profil colocataire</h3>
                 <p>Découvrez vos futurs colocataires. Créez un profil unique pour mieux vous connaître et trouver la colocation parfaite.</p>
-              </div>
-        </div> 
-      </div>
-
-      <div class="card">
-        <div class="face face1">
-          <div class="content">
-            <div class="icon">
-              <img src="../assets/images/calendar.svg" alt="icone d'un calendrier" class="icon-didacticiel">
             </div>
-          </div>
+        </div>
+    </a>
+</div>
+
+<div class="card">
+    <a href="../view/calendrier.php">
+        <div class="face face1">
+            <div class content="">
+                <div class="icon">
+                    <img src="../assets/images/calendar.svg" alt="icone d'un calendrier" class="icon-didacticiel">
+                </div>
+            </div>
         </div>
         <div class="face face2">
-              <div class="content">
+            <div class="content">
                 <h3>Planning des tâches</h3>
                 <p>Restez organisé et équitable. Planifiez et suivez les tâches ménagères et les responsabilités de manière transparente.</p>
-              </div>
-        </div> 
-      </div>
-
-      <div class="card">
-        <div class="face face1">
-          <div class="content">
-            <div class="icon">
-              <img src="../assets/images/notif.svg" alt="icone de notifications" class="icon-didacticiel">
             </div>
-          </div>
+        </div>
+    </a>
+</div>
+
+<div class="card">
+    <a href="">
+        <div class="face face1">
+            <div class="content">
+                <div class="icon">
+                    <img src="../assets/images/notif.svg" alt="icone de notifications" class="icon-didacticiel">
+                </div>
+            </div>
         </div>
         <div class="face face2">
-              <div class="content">
+            <div class="content">
                 <h3>Notifications</h3>
                 <p>Restez informé et connecté. Recevez des notifications en temps réel sur les événements importants, les rappels de tâches et les mises à jour essentielles pour une colocation harmonieuse.</p>
-              </div>
-        </div> 
-      </div>
-
-      <div class="card">
-        <div class="face face1">
-          <div class="content">
-            <div class="icon">
-              <img src="../assets/images/box.svg" alt="icone d'une boite" class="icon-didacticiel">
             </div>
-          </div>
+        </div>
+    </a>
+</div>
+
+<div class="card">
+    <a href="../view/form-idees.php">
+        <div class="face face1">
+            <div class="content">
+                <div class="icon">
+                    <img src="../assets/images/box.svg" alt="icone d'une boite" class="icon-didacticiel">
+                </div>
+            </div>
         </div>
         <div class="face face2">
-              <div class="content">
+            <div class="content">
                 <h3>Boîte à idées</h3>
-                <p>Partagez vos idées, améliorez votre colocation. Proposez des suggestions et contribuez à rendre votre
-            maison encore meilleure.</p>
-              </div>
-        </div> 
+                <p>Partagez vos idées, améliorez votre colocation. Proposez des suggestions et contribuez à rendre votre maison encore meilleure.</p>
+            </div>
+        </div>
+    </a>
+</div>
+
       </div>
 
-    </div>
-  </div>
-    
+   
  <!--#endregion -->
 
             <div   class=" absolute inset-x-0 bottom-0" ><img src="../assets/images/maisons.svg" alt="image de maisons"></div>           
@@ -307,6 +320,6 @@
 </main>
 
     <?php require('footer.php'); ?>
-     
+    <script src="../js/bell.js"></script>
 </body>
 </html>

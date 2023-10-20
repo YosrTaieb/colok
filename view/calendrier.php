@@ -32,7 +32,7 @@ if ($maison_id !== null) {
     <script src="../js/bootstrap.min.js"></script>
     <script src="../schedule/schedule/fullcalendar/lib/locales/fr.js"></script>
     <script src="../schedule/schedule/fullcalendar/js/script.js"></script>
-    <script src="../js/app.js"defer></script>
+  
     <!-- <script src="../js/forms.js" defer></script> -->
     <link rel="stylesheet" href="../build/styles/nav.css" />
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
@@ -49,6 +49,7 @@ if ($maison_id !== null) {
 
         html,
         body {
+        
             height: 100%;
             width: 100%;
             font-family: "Lato", sans-serif;
@@ -97,7 +98,7 @@ if ($maison_id !== null) {
                 <div id="calendar"></div>
             </div>
             
-            <div class="col-md-3"  >
+            <div class="col-md-3">
                 <div class="card rounded-0 shadow">
                     <div class="card-header bg-gradient bg-primary text-light">
                        
@@ -160,7 +161,7 @@ if ($maison_id !== null) {
         </div>
     </div>
     <!-- Event Details Modal -->
-    <div class="modal fade" tabindex="-1" data-bs-backdrop="static" id="event-details-modal">
+    <div class="modal fade" tabindex="1" data-bs-backdrop="static" id="event-details-modal">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content rounded-0">
                 <div class="modal-header rounded-0">

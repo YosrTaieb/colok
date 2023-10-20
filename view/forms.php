@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="../sass/styles/nav.scss" />
     <script src="../js/app.js"defer></script>
+    <link rel="stylesheet" href="../build/styles/bell.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Formulaire d'inscription</title>
   </head>

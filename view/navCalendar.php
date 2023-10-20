@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="../build/styles/navCalendar.css">
-  <script src="https://kit.fontawesome.com/3b1384a103.js" crossorigin="anonymous"></script>
-</head>
-<body>
+
+  <header>
   <nav>
     <input type="checkbox" id="check">
     <label for="check" class="checkbtn">
@@ -38,5 +30,4 @@
       </li>
     </ul>
   </nav>
-</body>
-</html>
+  </header>

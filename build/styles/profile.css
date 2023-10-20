@@ -228,13 +228,16 @@ footer {
 }
 
 .close-button {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
 }
 .close-button i {
-  margin-left: 900px;
+  position: absolute;
+  left: 95%;
+  top: 20px;
 }
 
 .card-container {

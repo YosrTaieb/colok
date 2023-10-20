@@ -55,7 +55,7 @@ label span {
 }
 
 .trait {
-  width: 25rem;
+  width: 15rem;
   position: absolute;
   z-index: -20;
   height: 1.25rem;

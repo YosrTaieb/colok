@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 include('../model/taches.php');
@@ -19,17 +18,13 @@ if ($maison_id !== null) {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scheduling</title>
- 
-    
+    <title>Planning</title>
     <link rel="stylesheet" href="../schedule/schedule/css/bootstrap.min.css">
     <link rel="stylesheet" href="../schedule/schedule/fullcalendar/lib/main.min.css">
     <script src="../schedule/schedule/fullcalendar/js/jquery-3.6.0.min.js"></script>
@@ -43,14 +38,11 @@ if ($maison_id !== null) {
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-
+    <link rel="stylesheet" href="../build/styles/footer.css" />
     <link rel="stylesheet" href="../build/styles/navCalendar.css" />
- 
-
-
-    
-
     <style>
+    @import url("https://fonts.googleapis.com/css2?family=Hubballi&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
         :root {
             --bs-primary-rgb: 71, 222, 152 !important;
         }
@@ -59,7 +51,8 @@ if ($maison_id !== null) {
         body {
             height: 100%;
             width: 100%;
-            font-family: 'Apple Chancery', cursive;
+            font-family: "Lato", sans-serif;
+
         }
 
         .btn-custom-primary:hover,
@@ -89,12 +82,13 @@ if ($maison_id !== null) {
             border-width: 1px !important;
         }
     </style>
+
 </head>
 
 <body class="bg-light">
-<header>
+
      <?php include("navCalendar.php")?>
-   </header>
+
 
     <div style="display: none; background-color: #A7F46A;" id="msg"><h1><?php if (!empty($msg)) { echo $msg; } ?></h1></div>
     <div class="container py-5" id="page-container">
@@ -201,6 +195,8 @@ if ($maison_id !== null) {
             </div>
         </div>
     </div>
+    <?php include("footer.php")?>
+
     <!-- Event Details Modal -->
 
     <?php 
@@ -211,17 +207,15 @@ if ($maison_id !== null) {
         $row['sdate'] = date("F d, Y h:i A", strtotime($row['start_datetime']));
         $row['edate'] = date("F d, Y h:i A", strtotime($row['end_datetime']));
         $sched_res[$row['id']] = $row;
-
-        
     }
-    
     ?>
+
 </body>
+
 <script>
     var scheds = <?= json_encode($sched_res) ?>;
 </script>
 <script src="../schedule/schedule/fullcalendar/js/script.js">
-    
 </script>
-<?php include("footer.php")?>
+
 </html>

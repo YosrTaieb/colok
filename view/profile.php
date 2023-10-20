@@ -18,14 +18,12 @@
     <link rel="stylesheet" href="../build/styles/nav.css" />
     <link rel="stylesheet" href="../build/styles/footer.css" />
     <title>Profil utilisateur</title>
+    
   </head>
  
   <body>
-   <header class="w-full text-gray-700 bg-white sticky z-50 top-0 drop-shadow-md">
      <?php include("nav.php")?>
-   </header>
-
-  
+   
 <div class="form-wrapper">
 <form style="display: none;"  action="../controller/profileControlleur.php" method="post" class="form mt-12" enctype="multipart/form-data">
 <a href="#" id="closeFormButton" class="close-button">

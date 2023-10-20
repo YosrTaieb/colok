@@ -1,30 +1,34 @@
-
 <?php
 require('../model/connexion.php');
 
 // Fonction pour lister les tâches de l'utilisateur
-function listeTache(){
+function listeTache() {
     // Vérifier si une session est active
-
-    if(isset($_SESSION)){
+    if (isset($_SESSION)) {
         $user_id = $_SESSION['id'];
         $conn = connexion();
 
         // Requête pour obtenir les tâches liées à l'utilisateur actuel
-        $sql = "SELECT * FROM taches 
-                LEFT JOIN type_taches ON taches.tache_id = type_taches.id 
+        $sql = "SELECT * FROM schedule_list  
                 WHERE user_id = :user_id";
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(':user_id', $user_id);
         $stmt->execute();
 
         $data = $stmt->fetchAll();
-        return $data;
+
+        // Vérifier si $data n'est pas vide avant de retourner les résultats
+        if (!empty($data)) {
+            return $data;
+        } else {
+            // Si $data est vide, vous pouvez retourner un tableau vide (ou une autre valeur par défaut)
+            return array();
+        }
     }
 }
 
 // Fonction pour ajouter une nouvelle tâche
-function addTache($tache_id, $interval, $occurence, $user_id){
+function addTache($tache_id, $interval, $occurence, $user_id) {
     $conn = connexion();
 
     // Préparation des données à insérer
@@ -47,9 +51,4 @@ function addTache($tache_id, $interval, $occurence, $user_id){
     // Fermeture de la connexion
     $conn = null;
 }
-
-
-
-
-
 ?>

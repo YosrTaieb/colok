@@ -8,6 +8,7 @@ $user = getUser($_SESSION['id']);
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="../sass/styles/nav.scss">
+<script src="../js/bell.js"></script>
 
 
 <head>
@@ -73,8 +74,10 @@ $user = getUser($_SESSION['id']);
 </head>
 
 <body>
+
 <header class="w-full text-gray-700 bg-white sticky z-50 top-0 drop-shadow-md">
      <?php include("nav.php")?>
+     
    </header>
 
     <main>

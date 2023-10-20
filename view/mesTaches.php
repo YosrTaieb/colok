@@ -1,7 +1,7 @@
-<?php
-session_start();
-include('../model/taches.php');
-$taches = listeTache();
+<?php 
+    session_start();
+    include('../model/taches.php');
+    $taches = listeTache();
 
 ?>
 
@@ -15,14 +15,10 @@ $taches = listeTache();
 
 
     <title>Table des tâches</title>
-    <!-- le headC empeche ma modal d'apparaitre CHERCHER SOLUTION -->
-    <link rel="stylesheet" type="text/css" href="../build/styles/nav.css">
-    <link rel="stylesheet" href="../build/styles/mesTaches.css">
-    <link rel="stylesheet" href="../build/styles/footer.css">
-    <!-- liens pour nav -->
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 </head>
 

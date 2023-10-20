@@ -14,6 +14,7 @@
     
 
         ];
+        
 
         $sql = "INSERT INTO utilisateur (nom,prenom,date_naissance,email,mdp,role) 
             values(:nom,:prenom,:date_naissance,:email,:mdp,:role) "; 
@@ -42,19 +43,23 @@
         return $data;
     }
 
-    function getUser($id){
+    function getUser($id) {
         $conn = connexion();
-
-        // Requête pour obtenir les tâches liées à l'utilisateur actuel
-        $sql = "SELECT * FROM utilisateur where id = :id ";
+    
+        // Requête pour obtenir les informations de l'utilisateur
+        $sql = "SELECT * FROM utilisateur WHERE id = :id";
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(':id', $id);
-        $stmt->execute();
-
-        $data = $stmt->fetch();
-        return $data;
+        if ($stmt->execute()) {
+            $data = $stmt->fetch(PDO::FETCH_ASSOC);
+            $conn = null; // Fermez la connexion
+            return $data;
+        } else {
+            // Erreur lors de l'exécution de la requête
+            return false;
+        }
     }
-
+    
 
     function updateUser($id,$nom,$prenom,$date_naissance,$photo,$allergies,$email,$mdp){
         $conn = connexion();

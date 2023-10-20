@@ -1,7 +1,20 @@
+
+
 <?php session_start();
-    require_once('../model/utilisateur.php');
+require_once('../model/utilisateur.php');
+
+
+// Vérifiez si la session contient 'id' et que la fonction getUser renvoie une valeur
+if (isset($_SESSION['id'])) {
     $user = getUser($_SESSION['id']);
+}
+
+
+
 ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,6 +30,9 @@
     <script src="../js/app.js"defer></script>
     <link rel="stylesheet" href="../build/styles/nav.css" />
     <link rel="stylesheet" href="../build/styles/footer.css" />
+  
+   
+   <script src="../js/bell.js"></script>
     <title>Profil utilisateur</title>
     
   </head>
@@ -34,10 +50,12 @@
     <a href="#imageFile" onclick="poutpout()" class="profile-link">
     <?php  if(isset($user['photo_profil'])){ ?>  <img  src="../images/<?php echo $user['photo_profil'] ?> " id="blah" alt="">     <i id="mon-icon" class="fas fa-camera"></i> <?php }
         else{?>
-            <img src="../assets/images/profile_img.png" id="blah" alt="">
+            <img src="../images/profile(1).svg" id="blah" alt="">
        <?php  } ?>
    
-        
+
+	
+
     </a>
     </div> 
     <h2 class="form-title">Information personnelle</h2>
@@ -104,7 +122,17 @@
 <figure class="snip1336">
   <img src="../assets/images/house-illustration.jpeg" alt="sample87" />
   <figcaption>
-    <img src="../images/<?php echo $user['photo_profil'] ?>" alt="profile-sample4" class="profile" />
+    <?php 
+    
+        if($user['photo_profil'] == ""){ ?>
+
+
+          <img src="../images/profile(1).svg" alt="profile-sample4" class="profile" />
+      <?php 
+        }
+      else
+      ?>
+    <img src="../images/<?php echo $user['photo_profil'] ?>" alt="" class="profile" />
     <h2><?php echo $user['prenom'] ?> <?php echo $user['nom'] ?></h2>
   
     <div>

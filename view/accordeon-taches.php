@@ -49,7 +49,7 @@
                     @apply  relative flex flex-col items-center justify-around mb-12;
                 }
                 .trait{
-                    @apply rounded-full bg-[#DABFFF] h-5 z-20 absolute;
+                    @apply rounded-full bg-[#8ECAE6] h-5 z-20 absolute;
                 }
 
                     
@@ -92,7 +92,7 @@
 
                                 <!-- flèche ouvrante-fermante -->
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
-                                    stroke="#c9a1ff" class="h-6 w-6">
+                                    stroke="#8ECAE6" class="h-6 w-6">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                                 </svg>
@@ -104,7 +104,7 @@
                         <div class="px-5 py-4 text-left">
 
                             <div class="liste flex flex-col md:flex-row">
-                                <span class="font-bold w-40"> Salon (1) </span>
+                                <span class="font-bold w-40"> Salon </span>
                                 <ul>
                                     <li>Ranger ce qui traîne</li>
                                     <li>Donner un coup au canapé</li>
@@ -113,7 +113,7 @@
                             </div>
 
                             <div class="liste flex flex-col my-5 md:flex-row">
-                                <span class="font-bold w-40"> Cuisine (1)</span>
+                                <span class="font-bold w-40"> Cuisine</span>
                                 <ul>
                                     <li>Remplir et vider le lave-vaisselle</li>
                                     <li>Couvrir / ranger les aliments</li>
@@ -124,7 +124,7 @@
                             </div>
 
                             <div class="liste flex flex-col my-5 md:flex-row">
-                                <span class="font-bold w-40"> Sanitaires (1)</span>
+                                <span class="font-bold w-40"> Sanitaires</span>
                                 <ul>
                                     <li>Nettoyer les WC</li>
                                     <li>Rincer la douche / baignoire</li>
@@ -133,9 +133,9 @@
                                 </ul>
 
                             </div>
-
+                            
                             <div class="liste flex flex-col my-5 md:flex-row">
-                                <span class="font-bold w-40">Papiers (1)</span>
+                                <span class="font-bold w-40">Papiers</span>
 
                                 <ul>
                                     <li>Ramasser le courrier et le mettra dans le bac "à traiter"</li>
@@ -156,7 +156,7 @@
                             Tâches hebdomadaires
                             <span class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
-                                    stroke="#c9a1ff" class="h-6 w-6">
+                                    stroke="#8ECAE6" class="h-6 w-6">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                                 </svg>
@@ -169,7 +169,7 @@
 
 
                             <div class="liste flex flex-col md:flex-row">
-                                <span class="font-bold w-40"> Salon (2) </span>
+                                <span class="font-bold w-40"> Salon </span>
                                 <ul>
                                     <li>Faire les poussières</li>
                                     <li>Passer le balais</li>
@@ -180,7 +180,7 @@
                             </div>
 
                             <div class="liste flex flex-col my-5 md:flex-row">
-                                <span class="font-bold w-40"> Cuisine (2)</span>
+                                <span class="font-bold w-40"> Cuisine</span>
                                 <ul>
                                     <li>Nettoyer les portes des placards, frigo, lave vaisselle</li>
                                     <li>Trier le contenu du réfrigérateur</li>
@@ -192,7 +192,7 @@
                             </div>
 
                             <div class="liste flex flex-col my-5 md:flex-row">
-                                <span class="font-bold w-40"> Sanitaires (1)</span>
+                                <span class="font-bold w-40"> Sanitaires</span>
                                 <ul>
                                     <li>Laver les serviettes et tapis de bain</li>
                                     <li>Nettoyer les miroirs</li>
@@ -206,7 +206,7 @@
                             </div>
 
                             <div class="liste flex flex-col my-5 md:flex-row">
-                                <span class="font-bold w-40">Papiers (2)</span>
+                                <span class="font-bold w-40">Papiers</span>
 
                                 <ul>
                                     <li>Payer les factures</li>
@@ -216,7 +216,7 @@
                             </div>
 
                             <div class="liste flex flex-col my-5 md:flex-row">
-                                <span class="font-bold w-40">Autre (2)</span>
+                                <span class="font-bold w-40">Autre</span>
                                 <ul>
                                     <li>Faire les courses</li>
                                     <li>Arroser les plantes</li>
@@ -238,7 +238,7 @@
             group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 
             group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
-                                    stroke="#c9a1ff" class="h-6 w-6">
+                                    stroke="#8ECAE6" class="h-6 w-6">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                                 </svg>
@@ -251,7 +251,7 @@
 
 
                             <div class="liste flex flex-col md:flex-row">
-                                <span class="font-bold w-40"> Salon (3) </span>
+                                <span class="font-bold w-40"> Salon</span>
                                 <ul>
                                     <li>Faire les vitres</li>
                                     <li>Laver les rideaux</li>
@@ -263,7 +263,7 @@
                             </div>
 
                             <div class="liste flex flex-col my-5 md:flex-row">
-                                <span class="font-bold w-40"> Cuisine (3)</span>
+                                <span class="font-bold w-40"> Cuisine</span>
                                 <ul>
                                     <li>Nettoyer le frigo</li>
                                     <li>Nettoyer le four</li>
@@ -276,7 +276,7 @@
                             </div>
 
                             <div class="liste flex flex-col my-5 md:flex-row">
-                                <span class="font-bold w-40"> Sanitaires (3)</span>
+                                <span class="font-bold w-40"> Sanitaires</span>
                                 <ul>
                                     <li>Faire les vitres</li>
                                     <li>Laver les rideaux</li>
@@ -290,7 +290,7 @@
                             </div>
 
                             <div class="liste flex flex-col my-5 md:flex-row">
-                                <span class="font-bold w-40">Papiers (3)</span>
+                                <span class="font-bold w-40">Papiers</span>
 
                                 <ul>
                                     <li>Faire les comptes</li>
@@ -298,7 +298,7 @@
                             </div>
 
                             <div class="liste flex flex-col my-5 md:flex-row">
-                                <span class="font-bold w-40">Autre (3)</span>
+                                <span class="font-bold w-40">Autre</span>
 
                                 <ul>
                                     <li>Nettoyer le jardin, la terrasse ou le balcon</li>
@@ -317,7 +317,7 @@
                             Tâches trimestrielles
                             <span class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
-                                    stroke="#c9a1ff" class="h-6 w-6">
+                                    stroke="#8ECAE6" class="h-6 w-6">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                                 </svg>
@@ -329,7 +329,7 @@
                         <div class="px-5 py-4 text-left">
 
                             <div class="liste flex flex-col md:flex-row">
-                                <span class="font-bold w-40"> Salon (4) </span>
+                                <span class="font-bold w-40"> Salon</span>
                                 <ul>
                                     <li>Nettoyer radiateur</li>
                                     <li>Laver les coussins</li>
@@ -339,7 +339,7 @@
                             </div>
 
                             <div class="liste flex flex-col my-5 md:flex-row">
-                                <span class="font-bold w-40"> Cuisine (4)</span>
+                                <span class="font-bold w-40"> Cuisine</span>
                                 <ul>
                                     <li>Nettoyer radiateur</li>
                                     <li>Trier les placards de nourriture</li>
@@ -350,7 +350,7 @@
                             </div>
 
                             <div class="liste flex flex-col my-5 md:flex-row">
-                                <span class="font-bold w-40"> Sanitaires (4)</span>
+                                <span class="font-bold w-40"> Sanitaires</span>
                                 <ul>
                                     <li>Nettoyer radiateur</li>
                                     <li>Nettoyer les canalisations </li>
@@ -373,7 +373,7 @@
         group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] 
         motion-reduce:transition-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
-                                    stroke="#c9a1ff" class="h-6 w-6">
+                                    stroke="#8ECAE6" class="h-6 w-6">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                                 </svg>
@@ -385,7 +385,7 @@
                         <div class="px-5 py-4 text-left">
 
                             <div class="liste flex flex-col md:flex-row">
-                                <span class="font-bold w-40"> Salon (5) </span>
+                                <span class="font-bold w-40"> Salon </span>
                                 <ul>
                                     <li>Nettoyer derrière les gros meubles</li>
                                     <li>Nettoyer le tapis </li>
@@ -394,7 +394,7 @@
                             </div>
 
                             <div class="liste flex flex-col my-5 md:flex-row">
-                                <span class="font-bold w-40"> Cuisine (5)</span>
+                                <span class="font-bold w-40"> Cuisine</span>
                                 <ul>
                                     <li>Nettoyer derrière les gros appareils</li>
                                     <li>Degivrer le congélateur </li>
@@ -403,7 +403,7 @@
                             </div>
 
                             <div class="liste flex flex-col my-5 md:flex-row">
-                                <span class="font-bold w-40"> Sanitaires (5)</span>
+                                <span class="font-bold w-40"> Sanitaires</span>
                                 <ul>
                                     <li>Changer rideau de douche</li>
                                     <li>Nettoyer derrière les gros meubles</li>

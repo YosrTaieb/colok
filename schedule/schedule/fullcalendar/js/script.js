@@ -1,14 +1,3 @@
-// document.addEventListener('DOMContentLoaded', function() {
-//     let calendarEl = document.getElementById('calendar');
-//     let calendar = new FullCalendar.Calendar(calendarEl, {
-//         locale: 'fr', // Définir la langue sur français
-//         // Autres options de configuration
-//     });
-//     calendar.render();
-    
-// });
-
-let calendar;
 let Calendar = FullCalendar.Calendar;
 let events = [];
 $(document).ready(function() {

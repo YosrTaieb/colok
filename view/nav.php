@@ -36,13 +36,14 @@
                     <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 nav-link" href="../view/forms.php">
     <i class="fas fa-home"></i> Profil Maison
 </a> 
-               <div class="flex flex-row">
-                        <div @click.away="open = false" class="relative" x-data="{ open: false }">
-
-                        <button @click="open = !open" class="flex flex-row items-center w-18 px-2 pb-2 pt-0 mt-0 text-sm font-semibold mr-[35px] ml-[35px] text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 ">
-
-                            <img src="../images/<?php echo $user['photo_profil']; ?>" id="blah2"  alt="" class="w-[62px] mt-2  rounded-full h-[4rem] max-w-full mx-auto  ">
-
+<div class="flex flex-row">
+        <div @click.away="open = false" class="relative" x-data="{ open: false }">
+            <button @click="open = !open" class="flex flex-row items-center w-18 px-2 pb-2 pt-0 mt-0 text-sm font-semibold mr-[35px] ml-[35px] text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4">
+                <?php if($user['photo_profil'] == "") { ?>
+                    <img src="../images/profile(1).svg" alt="Image de profil par défaut" class="w-[62px] mt-2  rounded-full h-[4rem] max-w-full mx-auto">
+                <?php } else { ?>
+                    <img src="../images/<?php echo $user['photo_profil']; ?>" alt="Image de profil" class="w-[62px] mt-2  rounded-full h-[4rem] max-w-full mx-auto">
+                <?php } ?>
                         </button>
 
                         <div x-show="open" x-transition:enter="transition ease-out duration-100"
@@ -68,14 +69,63 @@
                                     </a>
                             </div>
                             </div>
+                            
                         </div>
-                        <div class="px-2 py-2 mt-2 mr-2 grid grid-flow-col justify-stretch px-2 py-2 bg-white rounded-md shadow">
-                        <div class="icon" onclick="toggleNotifi()">
-			<img src="../assets/images/icons8-rappels-de-rendez-vous.gif" alt=""> <span>17</span>
-		</div>
-               </div>
-                </div>   
+                        <div @click.away="open = false" class="relative" style="z-index: 400;" x-data="{ open: false }">
+                        <button @click="open = !open" class="flex flex-row items-center w-18 px-2 pb-2 pt-0 mt-0 text-sm font-semibold mr-[35px] ml-[35px] text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4">
+                            <?php if($user['photo_profil'] == "") { ?>
+                                <img src="../images/profile(1).svg" alt="Image de profil par défaut" class="w-[62px] mt-2  rounded-full h-[4rem] max-w-full mx-auto">
+                            <?php } else { ?>
+                                <h2>
+                                <span class="bg-red-500 rounded-full px-2 text-sm">17</span> <img  class="w-8 mr--5 " src="../assets/images/icons8-rappels-de-rendez-vous.gif " alt=""> 
+                                <span class="text-sm mt-4"></span>
+                                </h2>
 
+                            <?php } ?>
+                        </button>
+
+                        <div x-show="open" x-transition:enter="transition ease-out duration-100"
+
+                            x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100"
+
+                            x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100"
+
+                            x-transition:leave-end="transform opacity-0 scale-95" class="absolute z-50 right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-80">
+
+                            <div class="px-2 py-2 bg-white rounded-md shadow ">
+
+                                   
+                                    <div class="">
+                                    <div class="notifi-item flex flex-row z-0">
+                                        <img src="../assets/images/profil-nav.svg"  alt="img">
+                                            <div class="text">
+                                            
+                                                <h4>Elias Abdurrahman</h4>
+                                                <p>@lorem ipsum dolor sit amet</p>
+                                            </div> 
+                                        </div>
+                                        <div class="notifi-item ">
+                                        <img src="../assets/images/profil-nav.svg" style="width: 25px;" alt="img">
+                                            <div class="text">
+                                            
+                                                <h4>Elias Abdurrahman</h4>
+                                                <p>@lorem ipsum dolor sit amet</p>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                        
+                                    
+                                        
+                               
+                            </div>
+                            </div>
+                            
+                        </div>
+                       
+               </div>
+                 
+               
+              
                             
                 </nav>
             </div>

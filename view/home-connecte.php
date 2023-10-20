@@ -1,4 +1,8 @@
-<?php session_start(); ?>
+<?php session_start(); 
+require_once("../model/utilisateur.php");
+$user = getUser($_SESSION["id"]);
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -6,6 +10,8 @@
     <title>Colok - Accueil</title>
     <?php require('headC.php');?>
     <link rel="stylesheet" href="../build/styles/cards.css">
+
+  
     
 
     <script>
@@ -314,6 +320,6 @@
 </main>
 
     <?php require('footer.php'); ?>
-     
+    <script src="../js/bell.js"></script>
 </body>
 </html>

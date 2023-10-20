@@ -1,5 +1,5 @@
-var box  = document.getElementById('box');
-var down = false;
+let  box  = document.getElementById('box');
+let  down = false;
 
 
 function toggleNotifi(){
@@ -8,7 +8,7 @@ function toggleNotifi(){
 		box.style.opacity = 0;
 		down = false;
 	}else {
-		box.style.height  = '510px';
+		box.style.height  = '100px';
 		box.style.opacity = 1;
 		down = true;
 	}
